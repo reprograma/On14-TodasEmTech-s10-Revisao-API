@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "likes": 1,
+        "nome": "La Brasa",
+        "categoria": "Hamburgueria",
+        "endereço": "Avenida Paulo Roberto Scandar",
+        "numero": 635,
+        "bairro": "Laranjeiras",
+        "cidade": "Taquaritinga",
+        "telefone": "011900000000",
+        "pagamento": ["dinheiro", "Cartão", "pix"],
+        "delivery": true
+
+    },
+
+    {
+        "id": 1,
+        "likes": 1,
+        "nome": "Magazine Luiza",
+        "categoria": "Loja",
+        "endereço": "Avenida Paulo Roberto Scandar",
+        "numero": 670,
+        "bairro": "Laranjeiras",
+        "cidade": "Taquaritinga",
+        "telefone": "01190000001",
+        "pagamento": ["dinheiro", "Cartão"]
+    }
+]

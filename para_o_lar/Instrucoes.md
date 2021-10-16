@@ -39,3 +39,4 @@ Lembre de usar o postman para testar se a solução tá certinha a partir das ro
 Usem o plantão de dúvidas, assistam a gravação da aula. E se ainda assim não conseguir, solicite ajuda da coleguinha. Sabemos que está ficando mais puxado, vamos nos ajudar mutuamente!
 
 
+mkdir controllers models routes
