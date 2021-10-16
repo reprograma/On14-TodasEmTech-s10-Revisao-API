@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "likes": 1,
+      "nome": "Mané Burguer",
+      "categoria": "Lanchonete",
+      "endereço": "Rua do Oratorio",
+      "numero": 918,
+      "bairro": "Mooca",
+      "cidade": "São Paulo",
+      "telefone": "11 95632-5632",
+      "pagamento": ["Dinheiro","Pix"],
+      "delivery": true
+    },
+
+    {
+      "id": 2,
+      "likes": 1,
+      "nome": "Bazar Imirim",
+      "categoria": "Loja",
+      "endereço": "Av. Imirim",
+      "numero": 1520,
+      "bairro": "Imirim",
+      "cidade": "São Paulo",
+      "telefone": "11 5265-5633",
+      "pagamento": ["Dinheiro", "Cartao","Pix"],
+      "delivery": false
+    }
+]
