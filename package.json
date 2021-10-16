@@ -1,0 +1,25 @@
+{
+  "name": "on14-todasemtech-s11-revisao-api",
+  "version": "1.0.0",
+  "description": "Como você está lidando com esse processo de transição?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dariellysantos/On14-TodasEmTech-s11-Revisao-API.git"
+  },
+  "author": "Darielly Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dariellysantos/On14-TodasEmTech-s11-Revisao-API/issues"
+  },
+  "homepage": "https://github.com/Dariellysantos/On14-TodasEmTech-s11-Revisao-API#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
+  }
+}
