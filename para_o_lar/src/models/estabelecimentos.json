@@ -1,0 +1,43 @@
+[
+    {
+        "id" : 1,
+        "likes": 1,
+        "nome" : "Ki-Delicia",
+        "categoria" : "Lanchonete",
+        "endereco" : "Avenida Viana Bandeira",
+        "numero" : 22,
+        "bairro" : "centro",
+        "cidade" : "Santo Amaro",
+        "telefone" : "98267-7879",
+        "pagamento" : ["dinheiro", "cartao", "pix"],
+        "delivery" : true        
+    },
+
+    {
+        "id" : 2,
+        "likes": 1,
+        "nome" : "Lá em Carla",
+        "categoria" : "Restaurante",
+        "endereco" : "Avenida Viana Bandeira",
+        "numero" : 161,
+        "bairro" : "centro",
+        "cidade" : "Santo Amaro",
+        "telefone" : "99903-1985",
+        "pagamento" : ["dinheiro", "cartao", "pix"],
+        "delivery" : true
+    },
+
+    {
+        "id" : 3,
+        "likes": 1,
+        "nome" : "Estrela Bar e Mercearia",
+        "categoria" : "Mercearia",
+        "endereco" : "Avenida Viana Bandeira",
+        "numero" : 450,
+        "bairro" : "verde vale",
+        "cidade" : "Santo Amaro",
+        "telefone" : "99105-0477",
+        "pagamento" : ["dinheiro", "pix"],
+        "delivery" : false
+    }
+]
