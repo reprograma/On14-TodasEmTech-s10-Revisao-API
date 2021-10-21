@@ -1,7 +1,27 @@
-const models = require("../models/estabelicimentos.json")
+const models = require("../models/estabelecimentos.json")
 
 const getAll = (req, res) => {
-    res.status(200).send(models)
+    const { pagamento, bairro, delivery } = req.query
+    let filtrados = models
+
+    if(pagamento){
+        filtrados = filtrados.filter(estabeleciamento => {
+            return estabeleciamento.pagamento.includes(pagamento)
+        })
+    }
+
+    if(bairro){
+        filtrados = filtrados.filter(estabeleciamento => {
+            return estabeleciamento.bairro == bairro
+        })
+    }
+
+    if(delivery){
+        filtrados = filtrados.filter(estabeleciamento => {
+            return estabeleciamento.delivery == (delivery == "true" ? true : false)
+        })
+    }
+    res.status(200).send(filtrados)
 }
 
 const getId = (req, res) => {
