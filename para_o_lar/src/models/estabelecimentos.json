@@ -9,7 +9,7 @@
         "bairro": "Centro",
         "cidade": "Tangara",
         "telefone": "12345.6789",
-        "pagamento": ["Dinheiro", "Cartão", "Pix"],
+        "pagamento": ["Dinheiro"],
         "delivery": true
     },
     {
@@ -19,10 +19,10 @@
         "categoria": "Loja",
         "endereco": "Rua Geraldo Abdala",
         "numero": 200,
-        "bairro": "Centro",
+        "bairro": "Gugu",
         "cidade": "Tangara",
         "telefone": "12345.6788",
-        "pagamento": ["Dinheiro", "Cartão", "Pix"],
+        "pagamento": ["Dinheiro", "Cartao", "Pix"],
         "delivery": false
 
     }
