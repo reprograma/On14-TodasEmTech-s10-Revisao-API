@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "likes": 1,
+        "nome": "Refeições Sandras",
+        "categoria": "Refeições",
+        "endereco": "Rua tal",
+        "numero": 432,
+        "bairro": "Vasco da Gama",
+        "telefone": "3221-2322",
+        "pagamento": [
+            "dinheiro",
+            "cartao",
+            "pix"
+        ],
+        "delivery": true
+    },
+    {
+        "id": 2,
+        "likes": 1,
+        "nome": "Yoko Sushi",
+        "categoria": "Comida Oriental",
+        "endereco": "Av. Norte",
+        "numero": 4346,
+        "bairro": "Espinheiro",
+        "telefone": "3221-2322",
+        "pagamento": [
+            "dinheiro",
+            "cartao",
+            "pix"
+        ],
+        "delivery": false
+    }
+]
