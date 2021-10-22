@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "likes": 1,
+        "nome": "Vila do Caranguejo",
+        "categoria": "bar",
+        "endereço": "jd dos namorados",
+        "numero": 100,
+        "bairro": "costa azul",
+        "cidade": "salvador",
+        "telefone": "3349-1234",
+        "pagamento": ["dinheiro", "cartao", "pix"],
+        "delivery": false
+    },
+    {
+        "id": 2,
+        "likes": 1,
+        "nome": "Five Sport Bar Villas",
+        "categoria": "bar",
+        "endereço": "av Luis tarquinio",
+        "numero": 100,
+        "bairro": "vilas do atlantico",
+        "cidade": "lauto de freitas",
+        "telefone": "(71) 3232-5678",
+        "pagamento": ["dinheiro", "cartao"],
+        "delivery": true
+    }
+]
