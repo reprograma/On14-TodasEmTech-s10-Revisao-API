@@ -1,0 +1,28 @@
+[
+   {
+      "id" : 1 ,
+      "likes" : 1,
+      "nome" : "Rei do Pirao",
+      "categoria" : "restaurante",
+      "endereco" : "Av Octavio Mangabeira n2609 " ,
+      "bairro" : "Pituba" ,
+      "cidade" : "Salvador" ,
+      "telefone" : "71 3044-2888",
+      "pagamento" : ["avista","pix","cartao"],
+      "delivery" : false
+      
+   },
+   {
+      "id" : 2,
+      "likes" : 2,
+      "nome" : "Coxinha do Gago",
+      "categoria" : "lanchonete",
+      "endereco" : "Praça do Imbui" ,
+      "bairro" : "Imbui " ,
+      "cidade" : "Salvador" ,
+      "telefone" : "71 98141-9047",
+      "pagamento" : ["avista","pix"],
+      "delivery" : true
+
+   }
+   ]
