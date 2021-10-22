@@ -1,5 +1,6 @@
 //return é para jogar para fora da função
 const models = require ("../models/estabelecimentos.json")
+const fs = require("fs")
 
 const getAll = (req, res) => {
     // transformar todos os itens abaixo do json em const
@@ -46,16 +47,70 @@ const getId = (req, res) => {
 }
 
 // FAZER UM POST = nome deverá ser cadastro de estabelecimento
-// LIKE E DESLIKE = Ver a logica, pegar por Id (igual get all) e fazer a logica de acrescentar e diminuir, colocar erro 404 se o usuario colocar um id que nao existe
 
-const like = (req, res) => {
-    const idRequest = req.params.id
-    
+const createLocal = (request, response) => {
+    const body = request.body
+
+    let newLocal = {
+        id: (models.length) +1,
+        likes: body.likes,
+        nome: body.nome,
+        categoria: body.categoria,
+        numero: body.numero,
+        bairro: body.bairro,
+        cidade: body.cidade,
+        telefone: body.telefone,
+        pagamento: body.pagamento,
+        delivery: body.delivery
+    }
+    models.push(newLocal)
+
+    fs.writeFile("./src/models/estabelecimentos.json", JSON.stringify(models),'utf8', function (err){
+        if(err){
+            return response.status(500).send({message: err});
+        }
+    })
+
+    response.status(200).json(
+        [{
+            "mensagem":"Estabelecimento cadastrado com sucesso!",
+            newLocal
+        }]
+    )
+
 }
 
 
 
+
+
+/*
+// LIKE E DESLIKE = Ver a logica, pegar por Id (igual get all) e fazer a logica de acrescentar e diminuir, colocar erro 404 se o usuario colocar um id que nao existe
+
+
+//PATCH 
+const likeDeslike = (request, response) => {
+    const idRequest = request.params.id
+    let novoLike = request.body.likes
+
+    localEncontrado = models.find(likes => likes.id == idRequest)
+
+    localEncontrado.likes = novoLike, models.length+1
+
+
+    response.status(200).json(
+        [{
+            "message":"Você gostou disso",
+            localEncontrado
+        }]
+    )
+}
+*/
+
+
 module.exports = {
     getAll,
-    getId
+    getId,
+    //likeDeslike,
+    createLocal
 }
