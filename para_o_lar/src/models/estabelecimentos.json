@@ -1,30 +1,49 @@
 [
     {
-
-        "id":1,
-        "likes":1,
-        "nome":"Gildo lanches",
-        "categoria":"lanchonete",
-        "endereço":"Praça do derby",
-        "numero":0,
-        "bairro":"derby",
-        "cidade":"recife",
-        "telefone":"3251-1778",
-        "pagamento":["cartao", "pix"],
+        "id": 1,
+        "likes": 6,
+        "nome": "Gildo lanches",
+        "categoria": "lanchonete",
+        "endereço": "Praça do derby",
+        "numero": 0,
+        "bairro": "derby",
+        "cidade": "recife",
+        "telefone": "3251-1778",
+        "pagamento": [
+            "cartao",
+            "pix"
+        ],
         "delivery": true
     },
-
     {
-        "id":2,
-        "likes":1,
-        "nome":"Nina sobremesas",
-        "categoria":"lanchonete",
-        "endereço":"Jardim Sao Paulo",
-        "numero":0,
-        "bairro":"JSP",
-        "cidade":"recife",
-        "telefone":"3251-2021",
-        "pagamento":["dinheiro", "pix"],
+        "id": 2,
+        "likes": 1,
+        "nome": "Nina sobremesas",
+        "categoria": "lanchonete",
+        "endereço": "Jardim Sao Paulo",
+        "numero": 0,
+        "bairro": "JSP",
+        "cidade": "recife",
+        "telefone": "3251-2021",
+        "pagamento": [
+            "dinheiro",
+            "pix"
+        ],
+        "delivery": false
+    },
+    {
+        "id": 3,
+        "likes": 2,
+        "nome": "docenique",
+        "endereço": "avenida boa viagem",
+        "numero": "4",
+        "bairro": "boa viagem",
+        "cidade": "Recife",
+        "telefone": "986260170",
+        "pagamento": [
+            "dinheiro",
+            "cartao"
+        ],
         "delivery": false
     }
 ]
