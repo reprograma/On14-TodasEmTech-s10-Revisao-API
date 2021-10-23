@@ -115,11 +115,24 @@ const like = (request, response) => {
         response.status(404).send({message:'Estabelecimento não encontrado.'})
     }
 
-    localFound.likes += 1
+    localFound.likes += 1 // esse 1 corresponde ao numero de curtidas que será somatizado quando o usuarios fizer o post
     write()
     response.status(200).send(localFound)
 }
 
+
+const deslike = (request, response) => {
+    const {id} = request.params // const id = request.params.id (outra forma de escrever)
+    const localFound = models.find(local => local.id == id)
+
+    if (localFound == undefined){
+        response.status(404).send({message:'Estabelecimento não encontrado.'})
+    }
+
+    localFound.likes -= 1 // esse 1 corresponde ao numero de curtidas que será somatizado quando o usuarios fizer o post
+    write()
+    response.status(200).send(localFound)
+}
 
 
 module.exports = {
@@ -127,5 +140,6 @@ module.exports = {
     getId,
     updateLike,
     createLocal, 
-    like
+    like,
+    deslike
 }

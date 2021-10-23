@@ -8,7 +8,8 @@ router.get("/:id", controller.getId)
 
 
 router.post("/cadastro", controller.createLocal)
-router.post("/:id/curtidas", controller.like)
+router.patch("/:id/likes", controller.like)
+router.patch("/:id/deslikes", controller.deslike)
 
 router.patch("/likes/:id", controller.updateLike)
 
