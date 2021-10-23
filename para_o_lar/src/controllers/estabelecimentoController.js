@@ -1,6 +1,11 @@
 //return é para jogar para fora da função
 const models = require ("../models/estabelecimentos.json")
 const fs = require("fs")
+const write = (request, response) =>{fs.writeFile("./src/models/estabelecimentos.json", JSON.stringify(models),'utf8', function (err){
+    if(err){
+        return response.status(500).send({message: err});
+    }
+})}
 
 const getAll = (req, res) => {
     // transformar todos os itens abaixo do json em const
@@ -64,13 +69,7 @@ const createLocal = (request, response) => {
         delivery: body.delivery
     }
     models.push(newLocal)
-
-    fs.writeFile("./src/models/estabelecimentos.json", JSON.stringify(models),'utf8', function (err){
-        if(err){
-            return response.status(500).send({message: err});
-        }
-    })
-
+    write ()
     response.status(200).json(
         [{
             "mensagem":"Estabelecimento cadastrado com sucesso!",
@@ -81,36 +80,33 @@ const createLocal = (request, response) => {
 }
 
 
-
-
-
-/*
 // LIKE E DESLIKE = Ver a logica, pegar por Id (igual get all) e fazer a logica de acrescentar e diminuir, colocar erro 404 se o usuario colocar um id que nao existe
 
 
 //PATCH 
-const likeDeslike = (request, response) => {
+const updateLike = (request, response) => {
     const idRequest = request.params.id
-    let novoLike = request.body.likes
+    let likeRequest = request.body.likes
 
-    localEncontrado = models.find(likes => likes.id == idRequest)
+    localEncontrado = models.find(local => local.id == idRequest)
 
-    localEncontrado.likes = novoLike, models.length+1
+    let like = localEncontrado.likes + likeRequest
+
+    localEncontrado.like = like
 
 
     response.status(200).json(
         [{
             "message":"Você gostou disso",
-            localEncontrado
+            models
         }]
     )
 }
-*/
 
 
 module.exports = {
     getAll,
     getId,
-    //likeDeslike,
+    updateLike,
     createLocal
 }

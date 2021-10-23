@@ -46,5 +46,20 @@
       "Cartao"
     ],
     "delivery": true
+  },
+  {
+    "id": 4,
+    "likes": 1,
+    "nome": "Clínica Fares",
+    "categoria": "Consultorio médico",
+    "numero": 99,
+    "bairro": "Vila Nova Cachoeirinha",
+    "cidade": "São Paulo",
+    "telefone": "11 2258-7751",
+    "pagamento": [
+      "Dinheiro",
+      "Cartao"
+    ],
+    "delivery": false
   }
 ]
