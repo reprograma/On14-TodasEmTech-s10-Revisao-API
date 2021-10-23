@@ -13,4 +13,8 @@ router.patch("/:id/deslikes", controller.deslike)
 
 router.patch("/likes/:id", controller.updateLike)
 
+router.delete("/:id/remover", controller.removeEstabelecimento)
+
+router.put("/:id/update", controller.update)
+
 module.exports = router

@@ -115,7 +115,7 @@ const like = (request, response) => {
         response.status(404).send({message:'Estabelecimento não encontrado.'})
     }
 
-    localFound.likes += 1 // esse 1 corresponde ao numero de curtidas que será somatizado quando o usuarios fizer o post
+    localFound.likes += 1 // esse 1 corresponde ao numero de curtidas que será somatizado quando o usuarios fizer o patch
     write()
     response.status(200).send(localFound)
 }
@@ -129,10 +129,62 @@ const deslike = (request, response) => {
         response.status(404).send({message:'Estabelecimento não encontrado.'})
     }
 
-    localFound.likes -= 1 // esse 1 corresponde ao numero de curtidas que será somatizado quando o usuarios fizer o post
+    localFound.likes -= 1 // esse 1 corresponde ao numero de curtidas que será somatizado quando o usuarios fizer o patch
     write()
     response.status(200).send(localFound)
 }
+
+const removeEstabelecimento = (request, response) => {
+    const idRequest = request.params.id
+    const localFound = models.find(local => local.id == idRequest)
+
+    if (localFound == undefined){
+        response.status(404).send({message: "Estabelecimento não encontrado."})
+    } 
+
+    const index = models.indexOf(localFound)
+    models.splice(index, 1)
+
+    write()
+
+    response.status(204).send([{message:"Estabelecimento removido com sucesso.", localFound}]) // para retornar a mensagem tem que por 200, pq 204 nao retorna mensagem
+}
+
+//PUT - outra forma de fazer sem que ele substitua todos os dados, quando for realizar uma atualização
+const update = (request, response) => {
+
+    const idRequest = request.params.id
+    //arquivo filtrado
+    const localFound = models.find(local => local.id == idRequest)
+    
+    if (localFound == undefined){
+        response.status(404).send({message:'Estabelecimento não encontrado.'})
+    }
+
+    const{nome, categoria, endereço, numero, bairro, cidade, telefone, pagamento, delivery} = request.body
+    
+    //pegando o arquivo filtrado
+    localFound.nome = nome || localFound.nome
+    localFound.categoria = categoria || localFound.categoria
+    localFound.endereço = endereço || localFound.endereço
+    localFound.numero = numero || localFound.numero
+    localFound.bairro = bairro || localFound.bairro
+    localFound.cidade = cidade || localFound.cidade
+    localFound.telefone = telefone || localFound.telefone
+    localFound.pagamento = pagamento || localFound.pagamento
+    localFound.delivery = delivery || localFound.delivery
+
+
+    response.status(200).json(
+        [
+            {
+                "message":"Dados atualizadas",
+                localFound
+            }
+        ]
+    )
+}
+
 
 
 module.exports = {
@@ -141,5 +193,7 @@ module.exports = {
     updateLike,
     createLocal, 
     like,
-    deslike
+    deslike,
+    removeEstabelecimento,
+    update
 }
