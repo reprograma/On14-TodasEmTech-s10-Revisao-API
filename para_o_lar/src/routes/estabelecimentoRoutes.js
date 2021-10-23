@@ -6,8 +6,9 @@ const router = express.Router()
 router.get("/todos", controller.getAll)
 router.get("/:id", controller.getId)
 
+
 router.post("/cadastro", controller.createLocal)
 
-router.put("/likes/:id", controller.updateLike)
+router.patch("/likes/:id", controller.updateLike)
 
 module.exports = router

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "likes": 1,
+    "likes": 3,
     "nome": "Mané Burguer",
     "categoria": "Lanchonete",
     "endereço": "Rua do Oratorio",
@@ -13,7 +13,8 @@
       "Dinheiro",
       "Pix"
     ],
-    "delivery": true
+    "delivery": true,
+    "like": 3
   },
   {
     "id": 2,
@@ -30,7 +31,8 @@
       "Cartao",
       "Pix"
     ],
-    "delivery": false
+    "delivery": false,
+    "like": 2
   },
   {
     "id": 3,

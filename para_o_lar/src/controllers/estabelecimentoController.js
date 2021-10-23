@@ -51,6 +51,8 @@ const getId = (req, res) => {
     res.status(200).send(found)
 }
 
+
+
 // FAZER UM POST = nome deverá ser cadastro de estabelecimento
 
 const createLocal = (request, response) => {
@@ -81,8 +83,6 @@ const createLocal = (request, response) => {
 
 
 // LIKE E DESLIKE = Ver a logica, pegar por Id (igual get all) e fazer a logica de acrescentar e diminuir, colocar erro 404 se o usuario colocar um id que nao existe
-
-
 //PATCH 
 const updateLike = (request, response) => {
     const idRequest = request.params.id
@@ -92,8 +92,9 @@ const updateLike = (request, response) => {
 
     let like = localEncontrado.likes + likeRequest
 
-    localEncontrado.like = like
+    localEncontrado.likes = like
 
+    write()
 
     response.status(200).json(
         [{
