@@ -1,14 +1,14 @@
 //return é para jogar para fora da função
 const models = require ("../models/estabelecimentos.json")
 const fs = require("fs");
-const { request } = require("http");
-const { response } = require("express");
+
 const write = (request, response) =>{fs.writeFile("./src/models/estabelecimentos.json", JSON.stringify(models),'utf8', function (err){
     if(err){
         return response.status(500).send({message: err});
     }
 })}
 
+//GET varios filtros
 const getAll = (req, res) => {
     // transformar todos os itens abaixo do json em const
     const {pagamento, bairro, delivery} = req.query
@@ -39,7 +39,7 @@ const getAll = (req, res) => {
     res.status(200).send(filtrados)
 }
 
-
+//GET por ID
 const getId = (req, res) => {
     const idSolicitado = req.params.idSolicitado
     // const {id} = req.params outra forma de fazer por ID subtituindo a linha acima
@@ -56,7 +56,7 @@ const getId = (req, res) => {
 
 
 // FAZER UM POST = nome deverá ser cadastro de estabelecimento
-
+//POST
 const createLocal = (request, response) => {
     const body = request.body
 
@@ -72,6 +72,15 @@ const createLocal = (request, response) => {
         pagamento: body.pagamento,
         delivery: body.delivery
     }
+
+    if(!body.nome|| !body.pagamento || !body.cidade){ //a exclamação quer dizer NOT, entao diz ai se nao vier o nome no body para return o erro.
+        return response.status(400).send({message: "Preencher todos os campos!"})
+    }
+
+    if(body.nome.length > 10 ){ //a exclamação quer dizer NOT, entao diz ai se nao vier o nome no body para return o erro.
+    return response.status(400).send({message: "Você ultrapassou o limite de 10 caracteres!"}) 
+    }
+
     models.push(newLocal)
     write ()
     response.status(201).json(
@@ -106,7 +115,7 @@ const updateLike = (request, response) => {
     )
 }
 
-
+//PATCH
 const like = (request, response) => {
     const {id} = request.params // const id = request.params.id (outra forma de escrever)
     const localFound = models.find(local => local.id == id)
@@ -120,7 +129,7 @@ const like = (request, response) => {
     response.status(200).send(localFound)
 }
 
-
+//PATCH
 const deslike = (request, response) => {
     const {id} = request.params // const id = request.params.id (outra forma de escrever)
     const localFound = models.find(local => local.id == id)
@@ -134,6 +143,7 @@ const deslike = (request, response) => {
     response.status(200).send(localFound)
 }
 
+//DELETE
 const removeEstabelecimento = (request, response) => {
     const idRequest = request.params.id
     const localFound = models.find(local => local.id == idRequest)
@@ -150,7 +160,9 @@ const removeEstabelecimento = (request, response) => {
     response.status(204).send([{message:"Estabelecimento removido com sucesso.", localFound}]) // para retornar a mensagem tem que por 200, pq 204 nao retorna mensagem
 }
 
-//PUT - outra forma de fazer sem que ele substitua todos os dados, quando for realizar uma atualização
+//EXEMPLO DE PUT 1
+//PUT - outra forma de fazer sem que ele substitua todos os dados, quando for realizar uma atualização 
+//IMPORTANTE, NAO FUNCIONA PARA BOLEANO
 const update = (request, response) => {
 
     const idRequest = request.params.id
@@ -161,8 +173,9 @@ const update = (request, response) => {
         response.status(404).send({message:'Estabelecimento não encontrado.'})
     }
 
+    //armazenando as informaçoes recebidas numa constante para cada chave
     const{nome, categoria, endereço, numero, bairro, cidade, telefone, pagamento, delivery} = request.body
-    
+
     //pegando o arquivo filtrado
     localFound.nome = nome || localFound.nome
     localFound.categoria = categoria || localFound.categoria
@@ -176,14 +189,46 @@ const update = (request, response) => {
 
 
     response.status(200).json(
-        [
-            {
-                "message":"Dados atualizadas",
-                localFound
-            }
-        ]
+        [{
+            "message":"Dados atualizadas",
+            localFound
+        }]
     )
 }
+
+
+//EXEMPLO DE PUT 2
+//PUT - outra forma de fazer sem que ele substitua todos os dados, quando for realizar uma atualização 
+//IMPORTANTE: FUNCIONA PARA BOLEANO / PARA TODOS TIPOS ***
+
+
+
+const updateWithBolean = (req, res) =>{
+    const idRequest  = req.params.id 
+    const bodyRequest = req.body
+
+    const found = models.find(estabelecimento => estabelecimento.id == idRequest)
+    
+    if(found == undefined){
+        res.status(404).send({message: 'Estabelecimento não encontrado'})
+    }
+
+    bodyRequest.id = idRequest
+
+    Object.keys(found).forEach((informacao)=>{
+        if(bodyRequest[informacao] == undefined){
+            found[informacao] = found[informacao]
+        } else {
+            found[informacao] = bodyRequest[informacao]
+        }
+    })
+ 
+    res.status(200).send(found)
+     
+}
+
+
+
 
 
 
@@ -195,5 +240,6 @@ module.exports = {
     like,
     deslike,
     removeEstabelecimento,
-    update
+    update,
+    updateWithBolean
 }

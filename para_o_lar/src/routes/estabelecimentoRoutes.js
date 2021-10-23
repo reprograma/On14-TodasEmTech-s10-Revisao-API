@@ -16,5 +16,6 @@ router.patch("/likes/:id", controller.updateLike)
 router.delete("/:id/remover", controller.removeEstabelecimento)
 
 router.put("/:id/update", controller.update)
+router.put("/:id/updateBolean", controller.updateWithBolean)
 
 module.exports = router
