@@ -55,13 +55,13 @@ const createEstabelecimento = (request, response)=>{ //criar um novo estabelecim
         delivery: bodyRequest.delivery
     }
 //tentar fazer o try catch para erro no lugar de if else
-    if(!bodyRequest.nome){
-        return response.status(400).json({error: 'Nome não pode estar em branco.'})
+    if(!bodyRequest.nome || !bodyRequest.endereço || !bodyRequest.categoria){
+        return response.status(400).json({error: 'Gentileza verificar, item obrigatório não inserido.'})
     }
 
 //comprimento do nome
-    if(bodyRequest.nome.length > 20){
-        return response.status(400).json({error: 'Limite de caracteres excedido. MÁx:20.'})
+    if(bodyRequest.nome.length > 15){
+        return response.status(400).json({error: 'Limite de caracteres excedido. MÁx:15.'})
     }
 
     models.push(novoEstabelecimento) //empurra as infos do body para o json
