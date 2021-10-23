@@ -9,8 +9,6 @@ app.use(express.json());//identifica q é pro servidor
 
 app.use("/estabelecimentos", routes);//rota raíz do caminho
 
-// app.use(routes);
-
-// app.use(express.json()); 
+app.use(routes);
 
 module.exports = app

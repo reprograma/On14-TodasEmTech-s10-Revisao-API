@@ -2,27 +2,64 @@
     {
         "id": 1,
         "likes": 1,
+        "deslikes": 0,
         "nome": "Vila do Caranguejo",
         "categoria": "bar",
-        "endereço": "jd dos namorados",
-        "numero": 100,
+        "endereço": "Av Octávio Mangabeira",
+        "numero": "s/n",
         "bairro": "costa azul",
         "cidade": "salvador",
-        "telefone": "3349-1234",
+        "telefone": "(71) 99321-6258",
         "pagamento": ["dinheiro", "cartao", "pix"],
-        "delivery": false
+        "delivery": true
     },
     {
         "id": 2,
         "likes": 1,
+        "deslike": 0,
         "nome": "Five Sport Bar Villas",
         "categoria": "bar",
         "endereço": "av Luis tarquinio",
-        "numero": 100,
+        "numero": 2849,
         "bairro": "vilas do atlantico",
-        "cidade": "lauto de freitas",
-        "telefone": "(71) 3232-5678",
+        "cidade": "lauro de freitas",
+        "telefone": "(71) 3051-3633",
         "pagamento": ["dinheiro", "cartao"],
+        "delivery": true
+    },
+    {
+        "id": 3,
+        "likes": 1,
+        "deslikes": 0,
+        "nome": "villa armazém",
+        "categoria": "bar",
+        "endereço": "av Luis tarquinio",
+        "numero": 2893,
+        "bairro": "vilas do atlantico",
+        "cidade": "lauro de freitas",
+        "telefone": "3349-5360",
+        "pagamento": [
+            "dinheiro",
+            "cartao",
+            "pix"
+        ],
+        "delivery": false
+    },
+    {
+        "id": 4,
+        "likes": 1,
+        "deslike": 0,
+        "nome": "Espetto Baiano Prime",
+        "categoria": "bar",
+        "endereço": "Av Octávio Mangabeira",
+        "numero": 2323,
+        "bairro": "Pituba",
+        "cidade": "Salvador",
+        "telefone": "(71) 99657-1630",
+        "pagamento": [
+            "dinheiro",
+            "cartao"
+        ],
         "delivery": true
     }
 ]
