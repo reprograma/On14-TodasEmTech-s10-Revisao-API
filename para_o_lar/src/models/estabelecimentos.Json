@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "likes": 1,
+        "nome": "One Açai",
+        "categoria": "lanchonete",
+        "endereço": "Rua Assai - Ouro Preto",
+        "numero": 200,
+        "bairro": "centro",
+        "cidade": "Olinda",
+        "telefone": "3030-3030",
+        "pagamento": ["Dinheiro", "cartão", "pix"],
+        "delivery": true
+    },
+
+    {
+        "id": 2,
+        "likes": 1,
+        "nome": "Fut Burguer",
+        "categoria": "lanchonete",
+        "endereço": "Rua Assai - Ouro Preto",
+        "numero": 200,
+        "bairro": "centro",
+        "cidade": "Olinda",
+        "relefone": "3030-3030",
+        "pagamento": ["Dinheiro", "cartão", "pix"],
+        "delivery": false
+    }
+
+]
+
+   
