@@ -61,5 +61,21 @@
       "Cartao"
     ],
     "delivery": false
+  },
+  {
+    "id": 5,
+    "likes": 1,
+    "nome": "Bella Grand",
+    "categoria": "Pizzaria",
+    "numero": 978,
+    "bairro": "Vila Espanhola",
+    "cidade": "São Paulo",
+    "telefone": "11 2256-0189",
+    "pagamento": [
+      "Dinheiro",
+      "Cartao",
+      "Pix"
+    ],
+    "delivery": true
   }
 ]
