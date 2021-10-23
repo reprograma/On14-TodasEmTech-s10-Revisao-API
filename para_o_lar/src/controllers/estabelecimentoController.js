@@ -1,6 +1,8 @@
 //return é para jogar para fora da função
 const models = require ("../models/estabelecimentos.json")
-const fs = require("fs")
+const fs = require("fs");
+const { request } = require("http");
+const { response } = require("express");
 const write = (request, response) =>{fs.writeFile("./src/models/estabelecimentos.json", JSON.stringify(models),'utf8', function (err){
     if(err){
         return response.status(500).send({message: err});
@@ -42,13 +44,13 @@ const getId = (req, res) => {
     const idSolicitado = req.params.idSolicitado
     // const {id} = req.params outra forma de fazer por ID subtituindo a linha acima
     
-    const found = models.find(estabelecimento => estabelecimento.id == idSolicitado )
+    const localFound = models.find(estabelecimento => estabelecimento.id == idSolicitado )
     
-    if(found == undefined){
+    if(localFound == undefined){
         res.status(404).send({message: "Estabelecimento não encontado" })
     }
     
-    res.status(200).send(found)
+    res.status(200).send(localFound)
 }
 
 
@@ -72,7 +74,7 @@ const createLocal = (request, response) => {
     }
     models.push(newLocal)
     write ()
-    response.status(200).json(
+    response.status(201).json(
         [{
             "mensagem":"Estabelecimento cadastrado com sucesso!",
             newLocal
@@ -83,7 +85,7 @@ const createLocal = (request, response) => {
 
 
 // LIKE E DESLIKE = Ver a logica, pegar por Id (igual get all) e fazer a logica de acrescentar e diminuir, colocar erro 404 se o usuario colocar um id que nao existe
-//PATCH 
+//PATCH -LETICIA
 const updateLike = (request, response) => {
     const idRequest = request.params.id
     let likeRequest = request.body.likes
@@ -105,9 +107,25 @@ const updateLike = (request, response) => {
 }
 
 
+const like = (request, response) => {
+    const {id} = request.params // const id = request.params.id (outra forma de escrever)
+    const localFound = models.find(local => local.id == id)
+
+    if (localFound == undefined){
+        response.status(404).send({message:'Estabelecimento não encontrado.'})
+    }
+
+    localFound.likes += 1
+    write()
+    response.status(200).send(localFound)
+}
+
+
+
 module.exports = {
     getAll,
     getId,
     updateLike,
-    createLocal
+    createLocal, 
+    like
 }
