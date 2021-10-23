@@ -9,7 +9,9 @@
         "bairro": "Centro",
         "cidade": "Tangara",
         "telefone": "12345.6789",
-        "pagamento": ["Dinheiro"],
+        "pagamento": [
+            "Dinheiro"
+        ],
         "delivery": true
     },
     {
@@ -22,9 +24,27 @@
         "bairro": "Gugu",
         "cidade": "Tangara",
         "telefone": "12345.6788",
-        "pagamento": ["Dinheiro", "Cartao", "Pix"],
+        "pagamento": [
+            "Dinheiro",
+            "Cartao",
+            "Pix"
+        ],
         "delivery": false
-
+    },
+    {
+        "id": 3,
+        "likes": 1,
+        "nome": "Braids da Tory",
+        "categoria": "Studio Afro",
+        "instagram": "braidsda_tory",
+        "endereco": "Atendimento a domicílio",
+        "cidade": "João Pessoa",
+        "estado": "Paraíba",
+        "telefone": "12344.4444",
+        "pagamento": [
+            "Dinheiro",
+            "Cartao",
+            "Pix"
+        ]
     }
-    
 ]
