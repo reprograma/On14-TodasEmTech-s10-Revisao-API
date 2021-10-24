@@ -65,7 +65,7 @@ const createPost = (request, response) =>{
     
     let criarEstabelecimento = request.body
 
-    const novoEstabelecimento = {
+    let novoEstabelecimento = {
         id: (models.length)+1,
         likes: criarEstabelecimento.likes,
         nome: criarEstabelecimento.nome,
@@ -79,6 +79,16 @@ const createPost = (request, response) =>{
         delivery: criarEstabelecimento.delivery
 
     }
+
+    if(!criarEstabelecimento,nome){
+        return response.status(400).send({
+            message: "O campo nome é obrigatório"
+        })
+    }
+
+
+
+
 
     models.push(novoEstabelecimento)
 
@@ -116,9 +126,77 @@ const atualizarLike = (request, response) =>{
     )
 }
 
+const atualizarDeslike = (request, response) =>{
+    let idRequest = request.params.id
+
+    let DeslikeRequest = request.body.likes
+
+    let estabEncontrado = models.find(estab => estab.id == idRequest)
+
+    let Deslike = estabEncontrado.likes - DeslikeRequest
+
+    estabEncontrado.likes = Deslike
+
+
+    write()
+    
+    response.status(200).json(
+    [{
+        mensagem: "like atualizado", 
+        models
+    }]
+    )
+}
+
+
+
+//fazendo junto com a professora
+
+const likeProf  = (request, response)=>{
+    const {id} = request.params
+    const found = models.find(estabelecimento => estabelecimento.id == id)
+
+    if(found == undefined){
+        response.status(404).send({message: "Estabelecimento não encontrado"})
+    }
+
+
+    found.likes += 1
+
+    response.status(200).send(found)
+
+    
+}
+
+
+const removeEstabelecimento = (request, response) => {
+    const idRequest = request.params.id
+    const localFound = models.find(local => local.id == idRequest)
+
+    if (localFound == undefined){
+        response.status(404).send({message: "Estabelecimento não encontrado."})
+    } 
+
+    const index = models.indexOf(localFound)
+    models.splice(index, 1)
+
+    write()
+
+    response.status(204).send([{message:"Estabelecimento removido com sucesso.", localFound}]) 
+}
+
+
+
+
+
+
+
 module.exports = {
     getAll,
     getId,
     createPost,
-    atualizarLike
+    atualizarLike,
+    likeProf,
+    atualizarDeslike,
+    removeEstabelecimento
 }
