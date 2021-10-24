@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "likes": 1,
+        "nome": "Neto Lanches",
+        "categoria": "lanchonete",
+        "endereco": "Rua Geraldo Abdala",
+        "numero": 100,
+        "bairro": "centro",
+        "cidade": "Tangara",
+        "telefone":"4165-4452",
+        "pagamento":[ "Dinheiro", "Cartão"]
+    }
+]
