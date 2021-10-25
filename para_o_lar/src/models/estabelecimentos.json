@@ -10,7 +10,6 @@
         "telefone": "3221-2322",
         "pagamento": [
             "dinheiro",
-            "cartao",
             "pix"
         ],
         "delivery": true
