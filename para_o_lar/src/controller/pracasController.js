@@ -1,24 +1,18 @@
 const pracasJson = require("../models/pacas.json");
 
 const getAll = (req, res) => {
-  const { bairro, publico, seguranca } = req.query;
+  const { bairro, nome } = req.query;
   let filtrados = pracasJson;
 
-  if (seguranca) {
+  if (nome) {
     filtrados = filtrados.filter((pracasJson) => {
-      return pracasJson.seguranca.includes(seguranca);
+      return pracasJson.nome == nome;
     });
   }
 
   if (bairro) {
     filtrados = filtrados.filter((pracasJson) => {
       return pracasJson.bairro == bairro;
-    });
-  }
-
-  if (publico) {
-    filtrados = filtrados.filter((pracasJson) => {
-      return pracasJson.publico.includes(publico);
     });
   }
 
@@ -56,14 +50,87 @@ const registerPracas = (req, res) => {
       idosos: 0,
       atividadeFisica: 0,
     },
+    comercioNoLocal: "nao",
   };
   console.log(pracasJson.length);
   pracasJson.push(newPraca);
   res.status(200).json(newPraca);
 };
 
+const update = (req, res) => {
+  const idRequestPracas = req.params.id;
+  let newUpdate = req.body;
+
+  newUpdateFound = pracasJson.find((pracas) => (pracas.id = idRequestPracas));
+
+  let newUpdateId = {
+    id: idRequestPracas,
+    nome: newUpdate.nome,
+    coordenada: newUpdate.coordenada,
+    bairro: newUpdate.bairro,
+    seguranca: {
+      perigoso: 0,
+      tranquilo: 0,
+    },
+    publico: {
+      aminais: 0,
+      namorados: 0,
+      idosos: 0,
+      atividadeFisica: 0,
+    },
+    comercioNoLocal: newUpdate.comercio,
+  };
+
+  pracasJson.push(newUpdateId);
+  res.status(200).json([
+    {
+      mensagem: " Informações do id atualizadas",
+      newUpdateId,
+    },
+    //não permitir
+  ]);
+};
+const updateComercio = (req, res) => {
+  const idRequest = req.params.id;
+  let newComercio = req.body.comercioNoLocal;
+
+  comercioFound = pracasJson.find((comercio) => comercio.id == idRequest);
+  comercioFound.comercioNoLocal = newComercio;
+  res.status(200).json([
+    {
+      mensagem: "Atualizada informação sobre comercio",
+      comercioFound,
+    },
+  ]);
+};
+
+const deletePraca = (req, res) => {
+  const idRequest = req.params.id;
+
+  const foundPraca = pracasJson.findIndex((praca) => praca.id == idRequest);
+
+  pracasJson.splice(foundPraca, 1);
+
+  res.status(200).json([
+    {
+      mensagem: "Praça deletada com sucesso",
+      deletado: idRequest,
+      pracasJson,
+    },
+  ]);
+};
+
+// remover
+// sistema de classificação
+//filtrar por informações de classificação
+
+// tratar informações
+
 module.exports = {
   getAll,
   getId,
   registerPracas,
+  update,
+  updateComercio,
+  deletePraca,
 };
