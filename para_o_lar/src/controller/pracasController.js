@@ -45,14 +45,13 @@ const registerPracas = (req, res) => {
       tranquilo: 0,
     },
     publico: {
-      aminais: 0,
+      animais: 0,
       namorados: 0,
       idosos: 0,
       atividadeFisica: 0,
     },
     comercioNoLocal: "nao",
   };
-  console.log(pracasJson.length);
   pracasJson.push(newPraca);
   res.status(200).json(newPraca);
 };
@@ -73,7 +72,7 @@ const update = (req, res) => {
       tranquilo: 0,
     },
     publico: {
-      aminais: 0,
+      animais: 0,
       namorados: 0,
       idosos: 0,
       atividadeFisica: 0,
@@ -120,11 +119,15 @@ const deletePraca = (req, res) => {
   ]);
 };
 
-// remover
-// sistema de classificação
-//filtrar por informações de classificação
+const updatePerigo = (req, res) => {
+  const idRequestPracas = req.params.id;
 
-// tratar informações
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.seguranca.perigoso = newUpdateFound.seguranca.perigoso + 1;
+
+  res.status(200).json(newUpdateFound);
+};
 
 module.exports = {
   getAll,
@@ -133,4 +136,5 @@ module.exports = {
   update,
   updateComercio,
   deletePraca,
+  updatePerigo,
 };

@@ -9,5 +9,6 @@ router.post("/criar", controller.registerPracas);
 router.put("/update/:id", controller.update);
 router.patch("/comercio/:id", controller.updateComercio);
 router.delete("/delete/:id", controller.deletePraca);
+router.post("/praca/:id/seguranca/perigoso", controller.updatePerigo);
 
 module.exports = router;
