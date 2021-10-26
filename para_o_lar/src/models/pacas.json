@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "nome": "Praça da Gloria",
+    "coordenada": "-19.94460401975868, -44.03784287365273",
+    "bairro": "Eldorado",
+    "publico": {
+      "aminais": 0,
+      "namorados": 0,
+      "idosos": 0,
+      "atividadeFisica": 0
+    },
+    "seguranca": {
+      "perigoso ": 0,
+      "tranquilo": 0
+    },
+    "comercioNoLocal": "nao"
+  },
+  {
+    "id": 2,
+    "nome": "Ciganos",
+    "coordenada": "-19.954916395975676, -44.03754183069004",
+    "bairro": "Inconfidentes",
+    "publico": {
+      "aminais": 0,
+      "namorados": 0,
+      "idosos": 0,
+      "atividadeFisica": 0
+    },
+    "seguranca": {
+      "perigoso ": 0,
+      "tranquilo": 0
+    },
+    "comercioNoLocal": "nao"
+  },
+  {
+    "id": 3,
+    "nome": "Jaboticatuba",
+    "coordenada": "--19.91388914661706, -44.08296359127351",
+    "bairro": "Ns senhora do Carmo",
+    "publico": {
+      "aminais": 0,
+      "namorados": 0,
+      "idosos": 0,
+      "atividadeFisica": 0
+    },
+    "seguranca": {
+      "perigoso ": 0,
+      "tranquilo": 0
+    },
+    "comercioNoLocal": "nao"
+  }
+]
