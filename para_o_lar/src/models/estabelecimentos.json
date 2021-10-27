@@ -1,0 +1,35 @@
+[
+   {
+    "id" : 1,
+    "likes" : 1,
+    "nomes" : "Pizzaria do cocaia" ,
+    "categoria" : "lanchonete" ,
+    "endereco" : "rua joao castor" ,
+    "numero" : 1254,
+    "Bairro" : "centro" ,
+    "cidade" : "sp" ,
+    "telefone" : "5522-1377" ,
+    "pagamento" :["Cartao"  , "pix"] ,
+    "delivery" : true
+   },
+   
+{
+    "id" : 2,
+    "likes" : 6,
+    "nomes" : "sorveteria" ,
+    "categoria" : "avelar" ,
+    "endereco" : "rua rubens de oliveira" ,
+    "numero" : 1260,
+    "Bairro" : "grajau" ,
+    "cidade" : "sp" ,
+    "telefone" : "5522-2456" ,
+    "pagamento" :["pix" , "dinheiro"] ,
+    "delivery" : false
+
+
+}
+
+]
+
+
+
