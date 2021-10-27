@@ -138,6 +138,17 @@ const updateTranquilo = (req, res) => {
 
   res.status(200).json(newUpdateFound);
 };
+
+const updateAnimais = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.publico.animais = newUpdateFound.publico.animais + 1;
+
+  res.status(200).json(newUpdateFound);
+};
+
 module.exports = {
   getAll,
   getId,
@@ -147,4 +158,5 @@ module.exports = {
   deletePraca,
   updatePerigo,
   updateTranquilo,
+  updateAnimais,
 };
