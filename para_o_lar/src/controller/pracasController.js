@@ -149,6 +149,37 @@ const updateAnimais = (req, res) => {
   res.status(200).json(newUpdateFound);
 };
 
+const updateIdosos = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.publico.idosos = newUpdateFound.publico.idosos + 1;
+
+  res.status(200).json(newUpdateFound);
+};
+
+const updateNamorados = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.publico.namorados = newUpdateFound.namorados.idosos + 1;
+
+  res.status(200).json(newUpdateFound);
+};
+
+const updateAtividadeFisica = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.publico.atividadeFisica =
+    newUpdateFound.publico.atividadeFisica + 1;
+
+  res.status(200).json(newUpdateFound);
+};
+
 module.exports = {
   getAll,
   getId,
@@ -159,4 +190,7 @@ module.exports = {
   updatePerigo,
   updateTranquilo,
   updateAnimais,
+  updateIdosos,
+  updateNamorados,
+  updateAtividadeFisica,
 };
