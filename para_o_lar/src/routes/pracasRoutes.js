@@ -10,5 +10,6 @@ router.put("/update/:id", controller.update);
 router.patch("/comercio/:id", controller.updateComercio);
 router.delete("/delete/:id", controller.deletePraca);
 router.post("/praca/:id/seguranca/perigoso", controller.updatePerigo);
+router.post("/praca/:id/seguranca/tranquilo", controller.updateTranquilo);
 
 module.exports = router;

@@ -129,6 +129,15 @@ const updatePerigo = (req, res) => {
   res.status(200).json(newUpdateFound);
 };
 
+const updateTranquilo = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.seguranca.tranquilo = newUpdateFound.seguranca.tranquilo + 1;
+
+  res.status(200).json(newUpdateFound);
+};
 module.exports = {
   getAll,
   getId,
@@ -137,4 +146,5 @@ module.exports = {
   updateComercio,
   deletePraca,
   updatePerigo,
+  updateTranquilo,
 };
