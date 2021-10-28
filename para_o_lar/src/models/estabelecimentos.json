@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "likes": 4,
+    "nome": "Mané Burguer",
+    "categoria": "Lanchonete",
+    "endereço": "Rua do Oratorio",
+    "numero": 918,
+    "bairro": "Mooca",
+    "cidade": "São Paulo",
+    "telefone": "11 95632-5632",
+    "pagamento": [
+      "Dinheiro",
+      "Pix"
+    ],
+    "delivery": true,
+    "like": 3
+  },
+  {
+    "id": 2,
+    "likes": 16,
+    "nome": "Bazar Imirim",
+    "categoria": "Loja",
+    "endereço": "Av. Imirim",
+    "numero": 1520,
+    "bairro": "Imirim",
+    "cidade": "São Paulo",
+    "telefone": "11 5265-5633",
+    "pagamento": [
+      "Dinheiro",
+      "Cartao",
+      "Pix"
+    ],
+    "delivery": false,
+    "like": 2
+  },
+  {
+    "id": 3,
+    "likes": 35,
+    "nome": "Mc Donald's",
+    "categoria": "Fast-food",
+    "numero": 4050,
+    "bairro": "Vista Alegre",
+    "cidade": "São Paulo",
+    "telefone": "11 3469-9163",
+    "pagamento": [
+      "Dinheiro",
+      "Cartao"
+    ],
+    "delivery": true
+  },
+  {
+    "id": 4,
+    "likes": 16,
+    "nome": "Bella Grand",
+    "categoria": "Pizzaria",
+    "numero": 978,
+    "bairro": "Vila Espanhola",
+    "cidade": "São Paulo",
+    "telefone": "11 2256-0189",
+    "pagamento": [
+      "Dinheiro",
+      "Cartao",
+      "Pix"
+    ],
+    "delivery": true
+  }
+]
