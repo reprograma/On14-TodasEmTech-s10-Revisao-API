@@ -5,14 +5,14 @@
 ## Revisão🚀
 Vamos ajudar o nosso comércio local criando uma rede social para os rígidos, vamos separa-los por categorias e bairros.
 
-![assets/proposta.jpg](assets/proposta.jpg)
+![assets/proposta.jpg](para_o_lar/assets/proposta.jpg)
 
 Foi uma revisão que ajudou a relembrar conceitos e modelos, como:
 
 ### Node.js
 ### HTTP
 ### API
-### REST e RESTful
+### REST e RESTFUL
 #### Verbos e métodos
 
 * GET: para consultas
