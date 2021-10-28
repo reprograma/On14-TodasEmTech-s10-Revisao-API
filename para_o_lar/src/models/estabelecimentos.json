@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "likes": 10,
+    "nome": "Rose variedades",
+    "categoria": "loja",
+    "endereco": "Av domingos Ferreira",
+    "numero": 2021,
+    "bairro": "caxias",
+    "cidade": "Natal",
+    "telefone": "3232 - 3232",
+    "pagamento": [ 
+      "pix", 
+      "cartao"
+    ],
+    "delivery": true
+  },
+
+  {
+    "id": 2,
+    "likes": 1,
+    "nome": "Boticario",
+    "categoria": "loja",
+    "endereco": "Rua Geraldo Abdala",
+    "numero": 20,
+    "bairro": "centro",
+    "cidade": "Tangara",
+    "telefone": "4198-1340",
+    "pagamento": [
+        "dinheiro",
+        "cartao"
+    ],
+    "delivery": false
+},
+
+
+  {
+    "id": 3,
+    "likes": 20,
+    "nome": "Mega Burguer",
+    "categoria": "Lanchonete",
+    "endereco": "Av domingos Ferreira",
+    "numero": 2020,
+    "bairro": "Caruaru",
+    "cidade": "Recife",
+    "telefone": "3031 -3031",
+    "pagamento": [
+      "avista", 
+      "pix"
+    ],
+    "delivery": false
+  }
+]
