@@ -44,7 +44,7 @@ Foi uma revisão que ajudou a relembrar conceitos e modelos, como:
 #### 📂Model
 > Por enquanto estamos apenas guardando nosso JSON aqui, mas no futuro será o lugar onde iremos modelar os esquemas de dados para o banco.
 
- -------------------------------          ![assets/estabelecimentos.jpg](assets/estabelecimentos.jpg)   --------------------------
+![assets/estabelecimentos.jpg](para_o_lar/assets/estabelecimentos.jpg)
 
 
 ---
