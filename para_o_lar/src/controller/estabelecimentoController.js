@@ -64,6 +64,19 @@ const createEstabelecimento = (request, response)=>{ //criar um novo estabelecim
         return response.status(400).json({error: 'Limite de caracteres excedido. MÁx:15.'})
     }
 
+//só permitir inserir categoria limitada
+    if(bodyRequest.categoria !== "bar"){
+        return response.status(400).json({error: 'Desculpe, este cadastro é exclusivo para bares.'})
+    }
+
+//validação por cidade
+    if(bodyRequest.cidade !== "salvador" || "lauro de freitas"){
+        return response.status(400).json({error: 'Você está no cadastramento para Salvador e Lauro de Freitas, gentileza verificar sua localidade.'})
+    }
+
+//como colocar pra sempre receber letras maiúscula e/ou minúscula???????????
+
+
     models.push(novoEstabelecimento) //empurra as infos do body para o json
 
     response.status(201).json( //status 201 é created
