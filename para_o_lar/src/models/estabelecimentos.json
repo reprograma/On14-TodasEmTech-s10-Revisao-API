@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "categoria": "Cultura",
+        "rate": 4.3,
+        "nome": "Estação Cabo Branco",
+        "endereço": "Avenida João Cirillo da Silva",
+        "numero": false,
+        "bairro": "Cabo Branco",
+        "cidade": "João Pessoa",
+        "telefone": "(83) 3214-8303",
+        "pagamento": [
+            "Cartão", 
+            "Dinheiro",
+            "Pix"
+        ]
+
+    },
+
+    {
+        "id": 2,
+        "categoria": "Cultura",
+        "rate": 4.5,
+        "nome": "Museu do Artesanato Paraibano - Janete Costa",
+        "endereço": "Praça da Independência",
+        "numero": 56,
+        "bairro": "Centro",
+        "cidade": "João Pessoa",
+        "telefone": "(83) 3221-2267",
+        "pagamento": [
+            "Cartão", 
+            "Dinheiro",
+            "Pix"
+        ]
+    },
+
+    {
+        "id": 3,
+        "categoria": "Sebo",
+        "rate": 4.6,
+        "nome": "O Sebo Cultural",
+        "endereço": "Av. Tabajaras",
+        "numero": 848,
+        "bairro": "Centro",
+        "cidade": "João Pessoa",
+        "telefone": "(83) 3222-4438",
+        "pagamento": [
+            "Cartão", 
+            "Dinheiro",
+            "Pix"
+        ]
+    }
+]
