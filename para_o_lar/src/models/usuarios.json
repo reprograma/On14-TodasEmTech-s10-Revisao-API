@@ -1,0 +1,22 @@
+[
+  {
+  "id": 1,
+  "recomendacoes": 1,
+  "nome": "Jorel Nascimento",
+  "experiencia": 5, 
+  "cidade": "São Paulo",
+  "telefone": "(11)3225-1687",
+  "sistemas": ["Mage 20th", "Vampiro", "Kult"],
+  "mestra": false
+  },
+  {
+    "id": 2,
+    "recomendacoes": 2,
+    "nome": "Maria Joaquina dos Santos",
+    "experiencia": 2, 
+    "cidade": "Porto Alegre",
+    "telefone": "(51)3225-6874",
+    "sistemas": ["Dnd", "Tormenta"],
+    "mestra": true
+    }
+]
