@@ -1,9 +1,8 @@
-const { response } = require("express");
-const models = require("../models/usuarios.json");
+const userJson = require("../models/usuarios.json");
 
-const getAll = (require, response) => {
-  const { mestra, sistemas, cidade} = require.query;
-  let filtrado = models;
+const getAll = (request, response) => {
+  const { mestra, sistemas, cidade} = request.query;
+  let filtrado = userJson;
 
   //filtrado por pagamento
   if(sistemas) {
@@ -31,10 +30,10 @@ const getAll = (require, response) => {
     response.status(200).send(filtrado);
 }
 
-const getById = (require, response) => {
+const getById = (request, response) => {
  
-    const {id} = require.params
-    const found = models.find(usuario => usuario.id == id);
+    const {id} = request.params
+    const found = userJson.find(usuario => usuario.id == id);
 
 
     if (found == undefined) {
@@ -44,12 +43,12 @@ const getById = (require, response) => {
   
 }
 
-const createUser = (require, response) => {
-  const body = require.body
+const createUser = (request, response) => {
+  const body = request.body
 
   let newUser = {
     
-      "id": (models.length)+1,
+      "id": (userJson.length)+1,
       "recomendacoes": body.recomendacoes,
       "nome": body.nome,
       "experiencia": body.experiencia, 
@@ -60,37 +59,54 @@ const createUser = (require, response) => {
       
   }
 
-  models.push(newUser);
+  userJson.push(newUser);
   response.status(201).send({message: "Usuario cadastrado com sucesso", newUser})
 }
 
-const addRecommendation = (require, response) => {
-  const {id} = require.params;
-  let userRecommended = models.find(user => user.id == id);
-  const {recomendar, desrecomendar} = require.query;
+const addRecommendation = (request, response) => {
+  const {id} = request.params;
+  let userRecommended = userJson.find(user => user.id == id);
+  const {recomendar, desrecomendar} = request.query;
+  let userRecommendation = userRecommended.recomendacoes;
+  let userName = userRecommended.nome;
   
   if(recomendar) {
-  let recommendations = userRecommended.recomendacoes;
+  let recommendations = userRecommendation
   recommendations++
-  userRecommended.recomendacoes = recommendations;
-  return response.status(200).send({message: `Você recomendou ${userRecommended.nome}, este foi recomendado ${userRecommended.recomendacoes} `})
+  userRecommendation = recommendations;
+  return response.status(200).send(
+    {message: `Você recomendou ${userName}, este foi recomendado ${userRecommendation} `})
   }
+  
   if(desrecomendar) {
-    let recommendations = userRecommended.recomendacoes;
+    let recommendations = userRecommendation;
     recommendations--
-    userRecommended.recomendacoes = recommendations;
-    return response.status(200).send({message: `Você desrecomendou ${userRecommended.nome}, este foi recomendado ${userRecommended.recomendacoes} `})
+    userRecommendation = recommendations;
+    return response.status(200).send(
+      {message: `Você desrecomendou ${userName}, este foi recomendado ${userRecommendation} `})
   }
 
   response.status(404).send({message: `Não encontramos se você gostaria de recomendar ou desrecomendar este usuario`})
 
 }
 
+const deleteUser = (request, response) => {
+  const {id} = request.params;
+  const indexRequested = userJson.findIndex(user => user.id == id);
 
+  if (indexRequested == -1) {
+    response.sendStatus(404)
+  }
+
+  userJson.splice(indexRequested, 1)
+  response.sendStatus(204);
+
+}
 
 module.exports = {
   getAll,
   getById,
   createUser,
-  addRecommendation
+  addRecommendation,
+  deleteUser
 }
