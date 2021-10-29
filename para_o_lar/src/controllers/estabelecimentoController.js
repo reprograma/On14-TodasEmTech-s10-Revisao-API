@@ -51,12 +51,13 @@ const getAll = (request, response) => {
 
 }
 
+/*
 const getById = (request, response) => {
 
     const idSolicitado = request.params.id;
     //const { id } = request.params;
 
-    const idFound = models.find (
+    const found = models.find (
         
         estabelecimento => {
         
@@ -77,20 +78,35 @@ const getById = (request, response) => {
 
         );
         
-    } else {
-        
-        response.status(200).send(idFound);
-
     }
+        
+    response.status(200).send(idFound);
+
+}
+*/
+const getId = (req, res) => {
+    const idSolicitado = req.params.id
+ 
+    const found = models.find(estabelecimento => estabelecimento.id == idSolicitado)
+
+    if(found == undefined){
+        res.status(404).send({message: 'Estabelecimento não encontrado'})
+    }
+
+    res.status(200).send(found)
+
+
 }
 
-const cadastro = (request, response) => {
-    const bodyRequest = request.body
 
-    const novoEstabelecimento = {
+const cadastro = (request, response) => {
+
+    const bodyRequest = request.body;
+
+    let novoEstabelecimento = {
 
         id: (models.length + 1),
-        likes: 1,
+        likes: bodyRequest.likes,
         nome: bodyRequest.nome,
         categoria: bodyRequest.categoria,
         instagram: bodyRequest.instagram,
@@ -103,8 +119,20 @@ const cadastro = (request, response) => {
         pagamento: bodyRequest.pagamento,
         delivery: bodyRequest.delivery
     
-    }
+    };
     
+    //trabalhar os campos obrigatorios
+    if (!bodyRequest.nome) {
+        
+        return response.status(400).send(
+            [
+                {
+                    "Message": "O campo 'nome' é obrigatório."
+                }
+            ]
+        );
+    }
+
     models.push(novoEstabelecimento);
 
     fs.writeFile("./src/models/estabelecimentos.json", JSON.stringify(models), "utf-8", function (err) {
@@ -113,15 +141,116 @@ const cadastro = (request, response) => {
         
     })
 
-    console.log(novoEstabelecimento);
-
     response.status(201).send(models);
 }
 
+const updateLike = (request, response) => {
+
+    const { id } = request.params; // mesma coisa que "const idRequest = request.params.id". As chaves é pq o id é um objeto
+
+    const found = models.find(estabelecimento => estabelecimento.id == id);
+
+    if (found == undefined) {
+
+        response.status(404); //não tem ponto depois do status é ".status(404)."
+        
+    }
+    
+    found.likes += 1;
+    
+    response.status(200).send(found);
+
+}
+
+const updateDeslike = (request, response) => {
+
+    const { id } = request.params; // mesma coisa que "const idRequest = request.params.id". As chaves é pq o id é um objeto
+
+    const found = models.find(estabelecimento => estabelecimento.id == id);
+
+    if (found == undefined) {
+
+        response.status(404).send({"Message": "Estabelecimento não encontrado."}); //não tem ponto depois do status é ".status(404)."
+        
+    }
+    
+    found.likes -= 1;
+    
+    response.status(200).send(found);
+
+}
+
+const deleteEstabelecimento = (request, response) => {
+
+    const { id } = request.params; // mesma coisa que "const idRequest = request.params.id". As chaves é pq o id é um objeto
+
+    const found = models.find(estabelecimento => estabelecimento.id == id);
+
+    if (found == undefined) {
+
+        response.status(404).send (
+            
+            {
+                
+                "Message": "Estabelecimento não encontrado."
+
+            }
+
+        ); //não tem ponto depois do status é ".status(404)."
+        
+    }
+
+    const index = models.indexOf(found);
+
+    models.splice(index, 1);
+    
+    response.sendStatus(204);
+
+}
+
+const atualizacao = (request, response) => {
+    
+    const { id } = request.params; // mesma coisa que "const idRequest = request.params.id". As chaves é pq o id é um objeto
+    
+    const bodyRequest = request.body;
+
+    let found = models.find(estabelecimento => estabelecimento.id == id);
+
+    if (found == undefined) {
+
+        response.status(404).send (
+            
+            {
+                
+                "Message": "Estabelecimento não encontrado."
+
+            }
+
+        ); //não tem ponto depois do status é ".status(404)."
+        
+    }
+
+
+    Object.keys(found).forEach(
+        
+        (key) => bodyRequest[key] == undefined ? found[key] = found[key] : found[key] = bodyRequest[key]
+
+    );
+
+    response.status(200).send(found);
+}
+
+
+
 module.exports = {
     getAll,
-    getById,
-    cadastro
+    //getById,
+    getId,
+    cadastro,
+    updateLike,
+    updateDeslike,
+    deleteEstabelecimento,
+    atualizacao
 };
 
 /* 
