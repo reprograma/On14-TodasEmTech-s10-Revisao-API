@@ -2,7 +2,7 @@
 
 ![apresentação da API](assets/caca-praca.jpeg)
 
-##### Disponível em: [GitHub](https://github.com/reprograma/On14-TodasEmTech-s10-Revisao-API/pull/14)
+##### Disponível em: [GitHub](https://github.com/Dariellysantos/On14-TodasEmTech-s11-Revisao-API/tree/darielly/para_o_lar)
 
 ##### Foi desenvolvido por [Darielly Santos](https://www.linkedin.com/in/darielly-santos/)
 
@@ -17,15 +17,15 @@ O objetivo era desenvolver um serviço de API Rest com crud para listar e classi
 ### Motivação para criação da API
 
 Minha motivação para criar essa API vem da necessidade de ainda termos que ter cuidados ao sairmos de casa, uma das principais solicitações feita pelos especialista é dar preferência a lugares ao ar livre.
-As praças sempre foram locais de socialiação, e nesso momento delicado pode ser uma grande aliada na retomada social com segurança.
+As praças sempre foram locais de socialiação, e nesse momento delicado, elas podem ser uma das grande aliada na retomada social com segurança.
 
-Com essa API, é possivel verificar varios pontos caracteristicos sobre a praça e localiza-las a partir de um filtro por bairro.
+Com essa API, é possivel verificar varios pontos característicos sobre as praças e localiza-las a partir de um filtro por bairro.
 
 <br><br>
 
 ### Melhorias na API no futuro
 
-Implementando uma base de dados, será possivel criar uma logica de négocio capaz de classificar as principais caracteristicas da praça conforme seus publicos mais frequênte.
+Implementando uma base de dados, será possível criar uma lógica de négocio capaz de classificar as principais características da praça conforme seu público mais frequênte.
 
 <br>
 
