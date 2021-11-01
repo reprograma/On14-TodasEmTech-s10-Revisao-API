@@ -39,7 +39,35 @@ const getId = (req, res) => {
 
 }
 
+//cadastro de novos estabelecimentos:
+const cadastroEstabelecimento = (req, res) => {
+    let body = req.body;
+    let novoEstabelecimento = {
+        id: (models.length)+1,
+        likes: body.likes,
+        nome: body.nome,
+        categoria: body.categoria,
+        endereco: body.endereco,
+        numero: body.numero,
+        bairro: body.bairro,
+        cidade: body.cidade,
+        telefone: body.telefone,
+        pagamento: body.pagamento,
+        delivery: body.delivery
+    }
+    models.push(novoEstabelecimento);
+    res.status(201).json(
+        [
+            {
+                "mensagem": "Estabelecimento cadastrado!",
+                novoEstabelecimento
+            }
+        ]
+    )
+}
+
 module.exports = {
     getAll,
-    getId
+    getId,
+    cadastroEstabelecimento
 }
