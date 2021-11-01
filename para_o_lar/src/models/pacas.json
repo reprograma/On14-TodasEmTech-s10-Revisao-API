@@ -4,6 +4,7 @@
     "nome": "Praça da Gloria",
     "coordenada": "-19.94460401975868, -44.03784287365273",
     "bairro": "Eldorado",
+    "checkIn": 0,
     "publico": {
       "animais": 0,
       "namorados": 0,
@@ -21,6 +22,7 @@
     "nome": "Ciganos",
     "coordenada": "-19.954916395975676, -44.03754183069004",
     "bairro": "Inconfidentes",
+    "checkIn": 0,
     "publico": {
       "animais": 0,
       "namorados": 0,
@@ -38,6 +40,7 @@
     "nome": "Jaboticatuba",
     "coordenada": "--19.91388914661706, -44.08296359127351",
     "bairro": "Ns senhora do Carmo",
+    "checkIn": 0,
     "publico": {
       "animais": 0,
       "namorados": 0,

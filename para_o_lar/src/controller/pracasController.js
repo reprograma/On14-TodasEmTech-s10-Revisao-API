@@ -119,6 +119,16 @@ const deletePraca = (req, res) => {
   ]);
 };
 
+const checkIn = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.checkIn = newUpdateFound.checkIn + 1;
+
+  res.status(200).json(newUpdateFound);
+};
+
 const updatePerigo = (req, res) => {
   const idRequestPracas = req.params.id;
 
@@ -180,6 +190,11 @@ const updateAtividadeFisica = (req, res) => {
   res.status(200).json(newUpdateFound);
 };
 
+// check- in
+// criar logica de limpeza
+// criar logica de concervação (paisagismo, manutenção de equipamentos, pintura)
+// criar logica de quadra para esportes (futbol, basquete , tenis , outros)
+
 module.exports = {
   getAll,
   getId,
@@ -193,4 +208,5 @@ module.exports = {
   updateIdosos,
   updateNamorados,
   updateAtividadeFisica,
+  checkIn,
 };
