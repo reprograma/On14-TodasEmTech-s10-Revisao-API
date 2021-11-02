@@ -15,6 +15,7 @@
       "perigoso": 0,
       "tranquilo": 0
     },
+    "limpeza": 0,
     "comercioNoLocal": "nao"
   },
   {
@@ -33,6 +34,7 @@
       "perigoso": 0,
       "tranquilo": 0
     },
+    "limpeza": 0,
     "comercioNoLocal": "nao"
   },
   {
@@ -51,6 +53,7 @@
       "perigoso": 0,
       "tranquilo": 0
     },
+    "limpeza": 0,
     "comercioNoLocal": "nao"
   }
 ]
