@@ -16,6 +16,11 @@
       "tranquilo": 0
     },
     "limpeza": 0,
+    "conservacao": {
+      "paisagismo": 0,
+      "manutençãoEquipamentos": 0,
+      "pintura": 0
+    },
     "comercioNoLocal": "nao"
   },
   {
@@ -35,6 +40,11 @@
       "tranquilo": 0
     },
     "limpeza": 0,
+    "conservacao": {
+      "paisagismo": 0,
+      "manutençãoEquipamentos": 0,
+      "pintura": 0
+    },
     "comercioNoLocal": "nao"
   },
   {
@@ -54,6 +64,11 @@
       "tranquilo": 0
     },
     "limpeza": 0,
+    "conservacao": {
+      "paisagismo": 0,
+      "manutençãoEquipamentos": 0,
+      "pintura": 0
+    },
     "comercioNoLocal": "nao"
   }
 ]
