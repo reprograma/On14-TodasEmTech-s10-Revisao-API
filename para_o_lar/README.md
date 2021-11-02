@@ -9,12 +9,12 @@ Projeto criado para aprendizado na aula da Profª Edlaine Pontes da {reprograma}
    * [Objetivos](#objetivos)
    * [Arquitetura Model View Controller](#arquitetura)
    * [Instalação](#instalação)
-      * [Pre Requisitos](#pré-requisitos)
+      * [Pré-requisitos](#pré-requisitos)
       * [Rodando o Back End](#rodando-o-back-end)
       * [Tecnologias](#tecnologias)
       * [Features](#features)
       * [Rotas](#rotas)
-   * [Modelo com campos obrigatórios para teste: Postman ou Insomnia](#modelo-com-campos-obrigatórios-para-teste)
+ 
 <!--te-->
 ## ✅Objetivos
 
@@ -45,7 +45,7 @@ Projeto criado para aprendizado na aula da Profª Edlaine Pontes da {reprograma}
                 |       
                 |       estabelecimentosController.js
                 |                      
-                📂---model
+                📂---models
                 |       
                 |       
                 |       estabelecimentos.json
