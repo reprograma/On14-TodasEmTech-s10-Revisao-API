@@ -198,7 +198,16 @@ const updateLimpeza = (req, res) => {
   res.status(200).json(newUpdateFound);
 };
 
-// criar logica de limpeza
+const updatePaisagismo = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.conservacao.paisagismo =
+    newUpdateFound.conservacao.paisagismo + 1;
+
+  res.status(200).json(newUpdateFound);
+};
 // criar logica de concervação (paisagismo, manutenção de equipamentos, pintura)
 // criar logica de quadra para esportes (futbol, basquete , tenis , outros)
 
@@ -217,4 +226,5 @@ module.exports = {
   updateAtividadeFisica,
   checkIn,
   updateLimpeza,
+  updatePaisagismo,
 };
