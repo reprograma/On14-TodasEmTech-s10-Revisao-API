@@ -55,6 +55,13 @@ const cadastroEstabelecimento = (req, res) => {
         pagamento: body.pagamento,
         delivery: body.delivery
     }
+    if(!body.nome || !body.pagamento || !body.cidade){
+        return res.status(400).send({mensagem: "Algum campo obrigatório não foi preenchido."})
+    }
+    if(body.nome.length > 10){
+        return res.status(400).send({mensagem: "Você ultrapassou o limite de 10 caracteres"})
+    }
+
     models.push(novoEstabelecimento);
     res.status(201).json(
         [
@@ -72,7 +79,7 @@ const adicionaLike = (req, res) => {
     const found = models.find(estabelecimento => estabelecimento.id == id);
     if (found == undefined) {
 
-        res.status(404);
+        res.status(404).send({message: "Estabelecimento não encontrado."});
         
     }
     found.likes += 1;
@@ -88,7 +95,7 @@ const adicionaUnlike = (req, res) => {
     const found = models.find(estabelecimento => estabelecimento.id == id);
     if (found == undefined) {
 
-        res.status(404);
+        res.status(404).send({message: "Estabelecimento não encontrado."});
         
     }
     
@@ -97,11 +104,43 @@ const adicionaUnlike = (req, res) => {
     res.status(200).send(found);
 
 }
+//deletar estabelecimento
+const removeEstabelecimento = (req, res) =>{
+    const id = req.params.id
+    const found = models.find(estabelecimento => estabelecimento.id == id)
+
+    if(found == undefined){
+        res.status(404).send({message: "Estabelecimento não encontrado"})
+    }
+}
+//atualizar estabelecimento
+const atualizacao = (req, res)=>{
+    const idRequest = req.params.id
+    const bodyRequest = req.body
+    const found = models.find(estabelecimento => estabelecimento.id == idRequest)
+
+    if(found == undefined){
+        res.status(404).send({message: "Estabelecimento não encontrado"})
+    }
+    bodyRequest.id = idRequest
+
+    Object.keys(found).forEach((informacao)=> {
+        if(bodyRequest[informacao] == undefined){
+            found[informacao] = found[informacao]
+        } else {
+            found[informacao] = bodyRequest[informacao]
+        }
+    })
+}
+
+
 
 module.exports = {
     getAll,
     getId,
     cadastroEstabelecimento,
     adicionaLike,
-    adicionaUnlike
+    adicionaUnlike,
+    removeEstabelecimento,
+    atualizacao
 }
