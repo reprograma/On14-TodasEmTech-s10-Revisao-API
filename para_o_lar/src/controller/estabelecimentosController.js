@@ -65,9 +65,43 @@ const cadastroEstabelecimento = (req, res) => {
         ]
     )
 }
+//adicionando like
+const adicionaLike = (req, res) => {
+
+    const { id } = req.params;
+    const found = models.find(estabelecimento => estabelecimento.id == id);
+    if (found == undefined) {
+
+        res.status(404);
+        
+    }
+    found.likes += 1;
+
+    res.status(200).send(found);
+
+}
+
+//adicionando deslike
+const adicionaUnlike = (req, res) => {
+
+    const { id } = req.params;
+    const found = models.find(estabelecimento => estabelecimento.id == id);
+    if (found == undefined) {
+
+        res.status(404);
+        
+    }
+    
+    found.likes -= 1;
+    
+    res.status(200).send(found);
+
+}
 
 module.exports = {
     getAll,
     getId,
-    cadastroEstabelecimento
+    cadastroEstabelecimento,
+    adicionaLike,
+    adicionaUnlike
 }
