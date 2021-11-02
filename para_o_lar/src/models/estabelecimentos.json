@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "likes": 15,
+        "nome": "ShopCao",
+        "categoria": "petshop",
+        "endereço": "Maria Nilce Magalhães",
+        "numero": "03",
+        "bairro": "Praia das Gaivotas",
+        "cidade": "Vila Velha",
+        "telefone": "(27) 3340-8976",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "delivery": true
+    },
+    {
+        "id": 2,
+        "likes": 5,
+        "nome": "Praia Pet",
+        "categoria": "petshop",
+        "endereço": "Rua Itaiabaia",
+        "numero": "05",
+        "bairro": "Coqueiral",
+        "cidade": "Vila Velha",
+        "telefone": "(27) 4105-3226",
+        "pagamento": ["Dinheiro", "cartao"],
+        "delivery": false
+    },
+    {
+        "id": 3,
+        "likes": 3,
+        "nome": "Animal Point",
+        "categoria": "petshop",
+        "endereço": "Av. Cel. Pedro Maia de Carvalho",
+        "numero": "14",
+        "bairro": "Praia das Gaivotas",
+        "cidade": "Vila Velha",
+        "telefone": "(27) 3140-1430",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "delivery": false
+    },
+    {
+        "id": 4,
+        "likes": 50,
+        "nome": "Petz",
+        "categoria": "petshop",
+        "endereço": "Rodovia do Sol",
+        "numero": "256",
+        "bairro": "Itapoã",
+        "cidade": "Vila Velha",
+        "telefone": "(27) 3022-5308",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "delivery": true
+    },
+    {
+        "id": 5,
+        "likes": 30,
+        "nome": "PetLand",
+        "categoria": "petshop",
+        "endereço": "Av. Antônio Gil Veloso",
+        "numero": "1008",
+        "bairro": "Praia de Itaparica",
+        "cidade": "Vila Velha",
+        "telefone": "(27) 3534-1900",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "delivery": true
+    }
+
+]
