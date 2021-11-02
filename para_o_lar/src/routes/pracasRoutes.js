@@ -19,5 +19,6 @@ router.post(
   "/praca/:id/publico/atividade-fisica",
   controller.updateAtividadeFisica
 );
+router.post("/praca/:id/limpeza", controller.updateLimpeza);
 
 module.exports = router;

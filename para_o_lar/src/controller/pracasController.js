@@ -18,8 +18,7 @@ const getAll = (req, res) => {
 
   res.status(200).json(filtrados);
 };
-// fazer um like, ou post
-//filtra o estabelecimento e add +1 no like, ->likes = likes + 1 (put)
+
 const getId = (req, res) => {
   const idPraca = req.params.id;
 
@@ -30,7 +29,6 @@ const getId = (req, res) => {
   }
   res.status(200).send(found);
 };
-// cadastrar pracas
 
 const registerPracas = (req, res) => {
   let bodyPraca = req.body;
@@ -190,7 +188,16 @@ const updateAtividadeFisica = (req, res) => {
   res.status(200).json(newUpdateFound);
 };
 
-// check- in
+const updateLimpeza = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.limpeza = newUpdateFound.limpeza + 1;
+
+  res.status(200).json(newUpdateFound);
+};
+
 // criar logica de limpeza
 // criar logica de concervação (paisagismo, manutenção de equipamentos, pintura)
 // criar logica de quadra para esportes (futbol, basquete , tenis , outros)
@@ -209,4 +216,5 @@ module.exports = {
   updateNamorados,
   updateAtividadeFisica,
   checkIn,
+  updateLimpeza,
 };
