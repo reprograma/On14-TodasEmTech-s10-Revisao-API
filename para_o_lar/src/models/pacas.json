@@ -17,9 +17,12 @@
     },
     "limpeza": 0,
     "conservacao": {
-      "paisagismo": 0,
-      "manutençãoEquipamentos": 0,
-      "pintura": 0
+      "boaConservacao": 0,
+      "precisaManutencao": {
+        "paisagismo": 0,
+        "manutencaoEquipamentos": 0,
+        "pintura": 0
+      }
     },
     "comercioNoLocal": "nao"
   },
@@ -41,9 +44,12 @@
     },
     "limpeza": 0,
     "conservacao": {
-      "paisagismo": 0,
-      "manutençãoEquipamentos": 0,
-      "pintura": 0
+      "boaConservacao": 0,
+      "precisaManutencao": {
+        "paisagismo": 0,
+        "manutencaoEquipamentos": 0,
+        "pintura": 0
+      }
     },
     "comercioNoLocal": "nao"
   },
@@ -65,9 +71,12 @@
     },
     "limpeza": 0,
     "conservacao": {
-      "paisagismo": 0,
-      "manutençãoEquipamentos": 0,
-      "pintura": 0
+      "boaConservacao": 0,
+      "precisaManutencao": {
+        "paisagismo": 0,
+        "manutencaoEquipamentos": 0,
+        "pintura": 0
+      }
     },
     "comercioNoLocal": "nao"
   }
