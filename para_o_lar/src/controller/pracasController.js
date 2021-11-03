@@ -203,8 +203,19 @@ const updatePaisagismo = (req, res) => {
 
   newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
 
-  newUpdateFound.conservacao.paisagismo =
-    newUpdateFound.conservacao.paisagismo + 1;
+  newUpdateFound.conservacao.precisaManutencao.paisagismo =
+    newUpdateFound.conservacao.precisaManutencao.paisagismo + 1;
+
+  res.status(200).json(newUpdateFound);
+};
+
+const updateEquipamento = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.conservacao.precisaManutencao.manutencaoEquipamentos =
+    newUpdateFound.conservacao.precisaManutencao.manutencaoEquipamentos + 1;
 
   res.status(200).json(newUpdateFound);
 };
@@ -227,4 +238,5 @@ module.exports = {
   checkIn,
   updateLimpeza,
   updatePaisagismo,
+  updateEquipamento,
 };

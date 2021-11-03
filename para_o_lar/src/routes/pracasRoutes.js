@@ -20,6 +20,13 @@ router.post(
   controller.updateAtividadeFisica
 );
 router.post("/praca/:id/limpeza", controller.updateLimpeza);
-router.post("/praca/:id/conservacao/paisagismo", controller.updatePaisagismo);
+router.post(
+  "/praca/:id/conservacao/precisa-manutencao/paisagismo",
+  controller.updatePaisagismo
+);
+router.post(
+  "/praca/:id/conservacao/precisa-manutencao/equipamentos",
+  controller.updateEquipamento
+);
 
 module.exports = router;
