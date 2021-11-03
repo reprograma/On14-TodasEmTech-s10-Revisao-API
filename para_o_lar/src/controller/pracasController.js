@@ -188,12 +188,22 @@ const updateAtividadeFisica = (req, res) => {
   res.status(200).json(newUpdateFound);
 };
 
-const updateLimpeza = (req, res) => {
+const updateLimpo = (req, res) => {
   const idRequestPracas = req.params.id;
 
   newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
 
-  newUpdateFound.limpeza = newUpdateFound.limpeza + 1;
+  newUpdateFound.limpeza.limpa = newUpdateFound.limpeza.limpa + 1;
+
+  res.status(200).json(newUpdateFound);
+};
+
+const updateSujo = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.limpeza.suja = newUpdateFound.limpeza.suja + 1;
 
   res.status(200).json(newUpdateFound);
 };
@@ -247,7 +257,8 @@ module.exports = {
   updateNamorados,
   updateAtividadeFisica,
   checkIn,
-  updateLimpeza,
+  updateLimpo,
+  updateSujo,
   updatePaisagismo,
   updateEquipamento,
   updatePintura,

@@ -19,7 +19,9 @@ router.post(
   "/praca/:id/publico/atividade-fisica",
   controller.updateAtividadeFisica
 );
-router.post("/praca/:id/limpeza", controller.updateLimpeza);
+router.post("/praca/:id/limpeza/limpo", controller.updateLimpo);
+router.post("/praca/:id/limpeza/sujo", controller.updateSujo);
+
 router.post(
   "/praca/:id/conservacao/precisa-manutencao/paisagismo",
   controller.updatePaisagismo
