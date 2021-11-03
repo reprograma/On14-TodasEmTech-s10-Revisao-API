@@ -273,6 +273,16 @@ const updateQuadraVolei = (req, res) => {
 
   res.status(200).json(newUpdateFound);
 };
+const updateQuadraOutros = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.quadraEsportes.sim.outros =
+    newUpdateFound.quadraEsportes.sim.outros + 1;
+
+  res.status(200).json(newUpdateFound);
+};
 // criar logica de quadra para esportes (futbol, basquete , tenis , outros)
 
 module.exports = {
@@ -297,4 +307,5 @@ module.exports = {
   updateQuadraBasquete,
   updateQuadraFutebol,
   updateQuadraVolei,
+  updateQuadraOutros,
 };
