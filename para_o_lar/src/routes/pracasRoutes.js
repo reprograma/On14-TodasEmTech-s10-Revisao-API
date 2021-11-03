@@ -28,5 +28,9 @@ router.post(
   "/praca/:id/conservacao/precisa-manutencao/equipamentos",
   controller.updateEquipamento
 );
+router.post(
+  "/praca/:id/conservacao/precisa-manutencao/pintura",
+  controller.updatePintura
+);
 
 module.exports = router;

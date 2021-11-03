@@ -219,6 +219,17 @@ const updateEquipamento = (req, res) => {
 
   res.status(200).json(newUpdateFound);
 };
+
+const updatePintura = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.conservacao.precisaManutencao.pintura =
+    newUpdateFound.conservacao.precisaManutencao.pintura + 1;
+
+  res.status(200).json(newUpdateFound);
+};
 // criar logica de concervação (paisagismo, manutenção de equipamentos, pintura)
 // criar logica de quadra para esportes (futbol, basquete , tenis , outros)
 
@@ -239,4 +250,5 @@ module.exports = {
   updateLimpeza,
   updatePaisagismo,
   updateEquipamento,
+  updatePintura,
 };
