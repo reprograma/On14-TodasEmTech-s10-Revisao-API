@@ -1,3 +1,4 @@
+<img src="./assets/grab-a-bite.jpg" width="100%">
 
 # API REST
 # GRAB A BITE - SEATTLE
@@ -53,17 +54,17 @@ Instalar:
 
 ### Rodando o Back End 
 
-# No terminal/ gitbash:
-# Clone este repositório
-$ git clone <git@github.com:VictoriaBastos253/GrabABite.git>
+## No terminal/ gitbash:
+### Clone este repositório
+$ git clone <https://github.com/VictoriaBastos/On14-TodasEmTech-s11-Revisao-API.git>
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd GrabABite
+## Acesse a pasta do projeto no terminal/cmd
+$ cd api-grab-a-bite
 
-# Instale as dependências
+## Instale as dependências
 $ npm install express nodemon cors
 
-# Execute o servidor
+## Execute o servidor
 $ npm start
 
  O servidor inciará na porta:7050. 
@@ -81,7 +82,7 @@ $ npm start
 - [Express](https://expressjs.com/pt-br/)
 - [Cors](https://www.npmjs.com/package/cors)
 
-### - Funcionalidades da aplicação
+## Funcionalidades da aplicação
 
 - [x] Cadastro do estabelecimento - POST
 - [x] Busca por id, categoria, pagamento, delivery - GET
@@ -94,22 +95,22 @@ $ npm start
 * local: http://localhost:7050
  
 
-#### Cria novo cadastro de estabelecimento
+## Cria novo cadastro de estabelecimento
 - [x] "/estabelecimentos" 
 
-#### Retorna estabelecimentos e filtra por pagamento, bairro ou delivery
+## Retorna estabelecimentos e filtra por pagamento, bairro ou delivery
 - [x] /estabelecimento/" 
 
-#### Retorna estabelecimento por um id específico
+## Retorna estabelecimento por um id específico
 - [x] "/estabelecimento/:id" 
 
-#### Atualiza o cadastro de um estabelecimento 
+## Atualiza o cadastro de um estabelecimento 
 - [x] "/estabelecimento/atualizar/:id"
 
-#### Dar um like ou um dislike em um estabelecimento
+## Dar um like ou um dislike em um estabelecimento
 - [x] "/estabelecimentos/:id" 
 
-#### Deleta cadastro do estabelecimento
+## Deleta cadastro do estabelecimento
 - [x] "/estabelecimentos/:id"
 
 
