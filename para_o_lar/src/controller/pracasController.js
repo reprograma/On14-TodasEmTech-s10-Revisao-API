@@ -293,7 +293,6 @@ const updateQuadraNao = (req, res) => {
 
   res.status(200).json(newUpdateFound);
 };
-// criar logica de quadra para esportes (futbol, basquete , tenis , outros)
 
 module.exports = {
   getAll,
