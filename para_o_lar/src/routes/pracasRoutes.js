@@ -43,5 +43,6 @@ router.post(
   "/praca/:id/quadra-esportes/futebol",
   controller.updateQuadraFutebol
 );
+router.post("/praca/:id/quadra-esportes/volei", controller.updateQuadraVolei);
 
 module.exports = router;
