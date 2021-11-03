@@ -1,6 +1,5 @@
 const models = require("../models/estabelecimentos.json");
-const fs = require("fs")
-
+const fs = require("fs");
 
 const getAll = (request, response) => {
     
@@ -87,14 +86,9 @@ const getById = (request, response) => {
 const getId = (req, res) => {
     const idSolicitado = req.params.id
  
-    const found = models.find(estabelecimento => estabelecimento.id == idSolicitado)
+    const found = models.find(estabelecimento => estabelecimento.id == idSolicitado);
 
-    if(found == undefined){
-        res.status(404).send({message: 'Estabelecimento não encontrado'})
-    }
-
-    res.status(200).send(found)
-
+    found == undefined ? res.status(404) : res.status(200).send(found);
 
 }
 
@@ -106,8 +100,9 @@ const cadastro = (request, response) => {
     let novoEstabelecimento = {
 
         id: (models.length + 1),
-        likes: bodyRequest.likes,
         nome: bodyRequest.nome,
+        likes: 0,
+        deslikes: 0,
         categoria: bodyRequest.categoria,
         instagram: bodyRequest.instagram,
         endereco: bodyRequest.endereco,
@@ -117,17 +112,21 @@ const cadastro = (request, response) => {
         estado: bodyRequest.estado,
         telefone: bodyRequest.telefone,
         pagamento: bodyRequest.pagamento,
-        delivery: bodyRequest.delivery
+        delivery: bodyRequest.delivery,
+        //avaliaçao geral: como colocar nota max e nota min.
+        //adicionar comentario para poder contabilizar o like ou deslike.
+        //adicionar like ou deslike aos comentarios e poder comentá-los*
+        comentarios: ""
     
     };
-    
+
     //trabalhar os campos obrigatorios
-    if (!bodyRequest.nome) {
+    if (!bodyRequest.nome || !bodyRequest.categoria) {
         
         return response.status(400).send(
             [
                 {
-                    "Message": "O campo 'nome' é obrigatório."
+                    "Message": "Os campos: 'nome', 'categoria', 'telefone' e 'pagamento', são obrigatórios. Certifique-se de tê-los preenchidos corretamente."
                 }
             ]
         );
@@ -137,27 +136,21 @@ const cadastro = (request, response) => {
 
     fs.writeFile("./src/models/estabelecimentos.json", JSON.stringify(models), "utf-8", function (err) {
         
-        if (err) return console.log(err);
+        err ? console.log(err) : response.status(201).send(models);
         
     })
 
-    response.status(201).send(models);
 }
 
 const updateLike = (request, response) => {
 
     const { id } = request.params; // mesma coisa que "const idRequest = request.params.id". As chaves é pq o id é um objeto
+    const comentario = request.params;
 
     const found = models.find(estabelecimento => estabelecimento.id == id);
 
-    if (found == undefined) {
-
-        response.status(404); //não tem ponto depois do status é ".status(404)."
-        
-    }
-    
-    found.likes += 1;
-    
+    found == undefined ? response.status(404) : found.likes += 1; //não tem ponto depois do status é ".status(404)."      
+ 
     response.status(200).send(found);
 
 }
@@ -168,13 +161,8 @@ const updateDeslike = (request, response) => {
 
     const found = models.find(estabelecimento => estabelecimento.id == id);
 
-    if (found == undefined) {
+    found == undefined ? response.status(404) : found.deslikes += 1; //não tem ponto depois do status é ".status(404)."
 
-        response.status(404).send({"Message": "Estabelecimento não encontrado."}); //não tem ponto depois do status é ".status(404)."
-        
-    }
-    
-    found.likes -= 1;
     
     response.status(200).send(found);
 
@@ -186,19 +174,7 @@ const deleteEstabelecimento = (request, response) => {
 
     const found = models.find(estabelecimento => estabelecimento.id == id);
 
-    if (found == undefined) {
-
-        response.status(404).send (
-            
-            {
-                
-                "Message": "Estabelecimento não encontrado."
-
-            }
-
-        ); //não tem ponto depois do status é ".status(404)."
-        
-    }
+    if (found == undefined) response.status(404); //não tem ponto depois do status é ".status(404)"
 
     const index = models.indexOf(found);
 
@@ -214,21 +190,11 @@ const atualizacao = (request, response) => {
     
     const bodyRequest = request.body;
 
+    bodyRequest.id == id;
+
     let found = models.find(estabelecimento => estabelecimento.id == id);
 
-    if (found == undefined) {
-
-        response.status(404).send (
-            
-            {
-                
-                "Message": "Estabelecimento não encontrado."
-
-            }
-
-        ); //não tem ponto depois do status é ".status(404)."
-        
-    }
+    if (found == undefined) response.status(404); //não tem ponto depois do status é ".status(404)"
 
 
     Object.keys(found).forEach(
@@ -239,8 +205,6 @@ const atualizacao = (request, response) => {
 
     response.status(200).send(found);
 }
-
-
 
 module.exports = {
     getAll,
@@ -259,5 +223,21 @@ module.exports = {
     Fazer um cadastro de um estabelecimento(POST)
     ou
     fazer like e deslike.
+
+    Mudar a rede social e criar a lógica para os botões de like e deslike e refinar as validações para cadastrar novos estabelecimentos, definindo as informações obrigatórias e limite de caracteres.
+
+
+    Readme completo:
+
+    Apresentação do projeto, 
+    arquitetura, 
+    tecnologias 
+    orientação ao usuário.
+
+*/
+
+
+/*
+    
 
 */
