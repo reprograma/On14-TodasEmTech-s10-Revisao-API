@@ -1,1 +1,50 @@
-[{"id":1,"likes":1,"nome":"Neto Lanches","categoria":"Lanchonete","endereco":"Rua Geraldo Abdala","numero":100,"bairro":"Centro","cidade":"Tangara","telefone":"12345.6789","pagamento":["Dinheiro"],"delivery":true},{"id":2,"likes":1,"nome":"Rose Variedades","categoria":"Loja","endereco":"Rua Geraldo Abdala","numero":200,"bairro":"Gugu","cidade":"Tangara","telefone":"12345.6788","pagamento":["Dinheiro","Cartao","Pix"],"delivery":false},{"id":3,"likes":1,"nome":"Braids da Tory","categoria":"Studio Afro","instagram":"braidsda_tory","endereco":"Atendimento a domicílio","cidade":"João Pessoa","estado":"Paraíba","telefone":"12344.4444","pagamento":["Dinheiro","Cartao","Pix"]},{"id":4},{"id":5,"telefone":"1111"}]
+[
+    {
+        "id": 1,
+        "likes": 1,
+        "nome": "Neto Lanches",
+        "categoria": "Lanchonete",
+        "endereco": "Rua Geraldo Abdala",
+        "numero": 100,
+        "bairro": "Centro",
+        "cidade": "Tangara",
+        "telefone": "12345.6789",
+        "pagamento": [
+            "Dinheiro"
+        ],
+        "delivery": true
+    },
+    {
+        "id": 2,
+        "likes": 1,
+        "nome": "Rose Variedades",
+        "categoria": "Loja",
+        "endereco": "Rua Geraldo Abdala",
+        "numero": 200,
+        "bairro": "Gugu",
+        "cidade": "Tangara",
+        "telefone": "12345.6788",
+        "pagamento": [
+            "Dinheiro",
+            "Cartao",
+            "Pix"
+        ],
+        "delivery": false
+    },
+    {
+        "id": 3,
+        "likes": 1,
+        "nome": "Braids da Tory",
+        "categoria": "Studio Afro",
+        "instagram": "braidsda_tory",
+        "endereco": "Atendimento a domicílio",
+        "cidade": "João Pessoa",
+        "estado": "Paraíba",
+        "telefone": "12344.4444",
+        "pagamento": [
+            "Dinheiro",
+            "Cartao",
+            "Pix"
+        ]
+    }
+]
