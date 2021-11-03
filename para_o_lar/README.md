@@ -16,7 +16,7 @@ O objetivo era desenvolver um serviço de API Rest com crud para listar e classi
 
 ### Motivação para criação da API
 
-Minha motivação para criar essa API vem da necessidade de ainda termos que ter cuidados ao sairmos de casa, uma das principais solicitações feita pelos especialista é dar preferência a lugares ao ar livre.
+Minha motivação para criar essa API vem da necessidade de ainda termos que ter cuidados ao sairmos de casa, uma das principais solicitações feitas pelos especialistas é dar preferência a lugares ao ar livre.
 As praças sempre foram locais de socialiação, e nesse momento delicado, elas podem ser uma das grande aliada na retomada social com segurança.
 
 Com essa API, é possivel verificar varios pontos característicos sobre as praças e localiza-las a partir de um filtro por bairro.
