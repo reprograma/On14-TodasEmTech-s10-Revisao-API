@@ -36,7 +36,13 @@
       },
       "nao": 0
     },
-    "comercioNoLocal": "nao"
+    "comercioNoLocal": {
+      "sim": {
+        "alimentação": 0,
+        "outros": 0
+      },
+      "não": 0
+    }
   },
   {
     "id": 2,
