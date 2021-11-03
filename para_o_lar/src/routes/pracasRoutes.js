@@ -35,4 +35,13 @@ router.post(
   controller.updatePintura
 );
 
+router.post(
+  "/praca/:id/quadra-esportes/basquete",
+  controller.updateQuadraBasquete
+);
+router.post(
+  "/praca/:id/quadra-esportes/futebol",
+  controller.updateQuadraFutebol
+);
+
 module.exports = router;

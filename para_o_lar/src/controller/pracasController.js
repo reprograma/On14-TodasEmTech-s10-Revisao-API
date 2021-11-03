@@ -240,7 +240,28 @@ const updatePintura = (req, res) => {
 
   res.status(200).json(newUpdateFound);
 };
-// criar logica de concervação (paisagismo, manutenção de equipamentos, pintura)
+
+const updateQuadraBasquete = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.quadraEsportes.sim.basquete =
+    newUpdateFound.quadraEsportes.sim.basquete + 1;
+
+  res.status(200).json(newUpdateFound);
+};
+
+const updateQuadraFutebol = (req, res) => {
+  const idRequestPracas = req.params.id;
+
+  newUpdateFound = pracasJson.find((praca) => praca.id == idRequestPracas);
+
+  newUpdateFound.quadraEsportes.sim.futebol =
+    newUpdateFound.quadraEsportes.sim.futebol + 1;
+
+  res.status(200).json(newUpdateFound);
+};
 // criar logica de quadra para esportes (futbol, basquete , tenis , outros)
 
 module.exports = {
@@ -262,4 +283,6 @@ module.exports = {
   updatePaisagismo,
   updateEquipamento,
   updatePintura,
+  updateQuadraBasquete,
+  updateQuadraFutebol,
 };
