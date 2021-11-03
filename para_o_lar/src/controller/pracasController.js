@@ -1,4 +1,5 @@
 const pracasJson = require("../models/pacas.json");
+// deixei para fazer mais condições para entrada de informações após implementação de um bd
 
 const getAll = (req, res) => {
   const { bairro, nome } = req.query;
