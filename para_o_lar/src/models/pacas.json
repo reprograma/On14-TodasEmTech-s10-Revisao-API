@@ -27,6 +27,15 @@
         "pintura": 0
       }
     },
+    "quadraESportes": {
+      "sim": {
+        "basquete": 0,
+        "futbol": 0,
+        "volei": 0,
+        "outros": 0
+      },
+      "nao": 0
+    },
     "comercioNoLocal": "nao"
   },
   {
