@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "nome": "Praça da Gloria",
+    "coordenada": "-19.94460401975868, -44.03784287365273",
+    "bairro": "Eldorado",
+    "checkIn": 0,
+    "publico": {
+      "animais": 0,
+      "namorados": 0,
+      "idosos": 0,
+      "atividadeFisica": 0
+    },
+    "seguranca": {
+      "perigoso": 0,
+      "tranquilo": 0
+    },
+    "limpeza": {
+      "limpa": 0,
+      "suja": 0
+    },
+    "conservacao": {
+      "boaConservacao": 0,
+      "precisaManutencao": {
+        "paisagismo": 0,
+        "manutencaoEquipamentos": 0,
+        "pintura": 0
+      }
+    },
+    "quadraESportes": {
+      "sim": {
+        "basquete": 0,
+        "futbol": 0,
+        "volei": 0,
+        "outros": 0
+      },
+      "nao": 0
+    },
+    "comercioNoLocal": "nao"
+  },
+  {
+    "id": 2,
+    "nome": "Ciganos",
+    "coordenada": "-19.954916395975676, -44.03754183069004",
+    "bairro": "Inconfidentes",
+    "checkIn": 0,
+    "publico": {
+      "animais": 0,
+      "namorados": 0,
+      "idosos": 0,
+      "atividadeFisica": 0
+    },
+    "seguranca": {
+      "perigoso": 0,
+      "tranquilo": 0
+    },
+    "limpeza": {
+      "limpa": 0,
+      "suja": 0
+    },
+    "conservacao": {
+      "boaConservacao": 0,
+      "precisaManutencao": {
+        "paisagismo": 0,
+        "manutencaoEquipamentos": 0,
+        "pintura": 0
+      }
+    },
+    "comercioNoLocal": "nao"
+  },
+  {
+    "id": 3,
+    "nome": "Jaboticatuba",
+    "coordenada": "--19.91388914661706, -44.08296359127351",
+    "bairro": "Ns senhora do Carmo",
+    "checkIn": 0,
+    "publico": {
+      "animais": 0,
+      "namorados": 0,
+      "idosos": 0,
+      "atividadeFisica": 0
+    },
+    "seguranca": {
+      "perigoso": 0,
+      "tranquilo": 0
+    },
+    "limpeza": {
+      "limpa": 0,
+      "suja": 0
+    },
+    "conservacao": {
+      "boaConservacao": 0,
+      "precisaManutencao": {
+        "paisagismo": 0,
+        "manutencaoEquipamentos": 0,
+        "pintura": 0
+      }
+    },
+    "comercioNoLocal": "nao"
+  }
+]
