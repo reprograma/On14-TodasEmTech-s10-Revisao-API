@@ -15,7 +15,10 @@
       "perigoso": 0,
       "tranquilo": 0
     },
-    "limpeza": 0,
+    "limpeza": {
+      "limpa": 0,
+      "suja": 0
+    },
     "conservacao": {
       "boaConservacao": 0,
       "precisaManutencao": {
@@ -42,7 +45,10 @@
       "perigoso": 0,
       "tranquilo": 0
     },
-    "limpeza": 0,
+    "limpeza": {
+      "limpa": 0,
+      "suja": 0
+    },
     "conservacao": {
       "boaConservacao": 0,
       "precisaManutencao": {
@@ -69,7 +75,10 @@
       "perigoso": 0,
       "tranquilo": 0
     },
-    "limpeza": 0,
+    "limpeza": {
+      "limpa": 0,
+      "suja": 0
+    },
     "conservacao": {
       "boaConservacao": 0,
       "precisaManutencao": {
