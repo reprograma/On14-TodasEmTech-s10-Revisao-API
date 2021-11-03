@@ -21,7 +21,6 @@ router.post(
 );
 router.post("/praca/:id/limpeza/limpo", controller.updateLimpo);
 router.post("/praca/:id/limpeza/sujo", controller.updateSujo);
-
 router.post(
   "/praca/:id/conservacao/precisa-manutencao/paisagismo",
   controller.updatePaisagismo
@@ -34,7 +33,6 @@ router.post(
   "/praca/:id/conservacao/precisa-manutencao/pintura",
   controller.updatePintura
 );
-
 router.post(
   "/praca/:id/quadra-esportes/basquete",
   controller.updateQuadraBasquete
