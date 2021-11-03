@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "likes": 1,
+        "nome": "22 Reels",
+        "categoria": "lanchonete",
+        "endereço": "Av. doutor claudio",
+        "numero": "600",
+        "bairro": "Janga",
+        "cidade": "Paulista",
+        "telefone": "(081) 3434-2158",
+        "pagamento": ["dinheiro", "cartão", "pix"],
+        "delivery": true
+
+    },
+
+    {
+        "id": 2,
+        "likes": 1,
+        "nome": "Garotinha do atlântico",
+        "categoria": "restaurante",
+        "endereço": "Av. beira mar",
+        "numero": "1528",
+        "bairro": "Casa caiada",
+        "cidade": "Olinda",
+        "telefone": "(081) 3023-2843",
+        "pagamento": ["dinheiro", "cartão", "pix"],
+        "delivery": false
+        
+    }
+
+
+
+]
