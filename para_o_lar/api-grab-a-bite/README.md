@@ -66,8 +66,8 @@ $ npm install express nodemon cors
 # Execute o servidor
 $ npm start
 
-# O servidor inciará na porta:7050
-# acesse <http://localhost:7050>
+ O servidor inciará na porta:7050. 
+ Acesse <http://localhost:7050>
 
 
 * Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para para chamar e testar os endpoints da API localmente.
