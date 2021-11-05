@@ -1,33 +1,188 @@
 [
     {
         "id": 1,
-        "likes": 1,
-        "nome": "Neto Lanches",
-        "categoria": "lanchonete",
-        "endereço": "Rua Geraldo Abdala",
-        "numero": 100,
-        "bairro": "centro",
-        "cidade": "Tangara",
-        "telefone": "4156-4452",
-        "pagamento": ["Dinheiro", "pix"],
+        "likes": 5,
+        "nome": "Drogaria Unilagos",
+        "categoria": "Farmácia",
+        "endereço": "Rua Blanca",
+        "numero": 25,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "2624-0082",
+        "pagamento": ["Dinheiro", "cartão"],
         "delivery": true
-
+      
     },
 
     {
         "id": 2,
-        "likes": 1,
-        "nome": "Rose variedades",
-        "categoria": "loja",
-        "endereço": "Rua Geraldo Abdala",
-        "numero": 200,
-        "bairro": "centro",
-        "cidade": "Tangara",
-        "telefone": "4155-4452",
-        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "likes": 5,
+        "nome": "Drogalagos",
+        "categoria": "Farmácia",
+        "endereço": "Avenida Dr. Almir Guimarães",
+        "numero": 3,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "2655-8090",
+        "pagamento": ["Dinheiro", "cartão"],
+        "delivery": true
+        
+    },
+
+    {
+        "id": 3,
+        "likes": 5,
+        "nome": "Big Oferta",
+        "categoria": "Supermercado",
+        "endereço": "Avenida Dr. Almir Guimarães",
+        "numero": 4,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "2624-9301",
+        "pagamento": ["Dinheiro", "cartão"],
+        "delivery": true
+
+    },
+    {
+        "id": 4,
+        "likes": 5,
+        "nome": "Padaria Bianca",
+        "categoria": "Padaria",
+        "endereço": "Rua Blanca",
+        "numero": 25,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "2624-6279",
+        "pagamento": ["Dinheiro", "cartão"],
         "delivery": false
 
+    },
+    {
+        "id": 5,
+        "likes": 5,
+        "nome": "Fausta Lanches",
+        "categoria": "Lanchonete",
+        "endereço": "Rua dos Albatrozes",
+        "numero": 101,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "99716-0603",
+        "pagamento": ["Dinheiro", "cartão"],
+        "delivery": true
+
+    },
+    {
+        "id": 6,
+        "likes": 5,
+        "nome": "Don Pastel",
+        "categoria": "Lanchonete",
+        "endereço": "Rua Nossa Senhora da Conceição",
+        "numero": 5,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "99865-4973",
+        "pagamento": ["Dinheiro", "cartão"],
+        "delivery": true
+
+    },
+    {
+        "id": 7,
+        "likes": 5,
+        "nome": "Rei das Esfihas",
+        "categoria": "Lanchonete",
+        "endereço": "Rua Nossa Senhora da Conceição",
+        "numero": 4,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "98836-2456",
+        "pagamento": ["Dinheiro", "cartão"],
+        "delivery": true
+
+    },
+    {
+        "id": 8,
+        "likes": 5,
+        "nome": "Casa do Lanche",
+        "categoria": "Lanchonete",
+        "endereço": "Avenida Dr. Almir Guimarães",
+        "numero": 27,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "2624-9191",
+        "pagamento": ["Dinheiro", "cartão"],
+        "delivery": false
+
+    },
+    {
+        "id": 9,
+        "likes": 5,
+        "nome": "Posto Radar",
+        "categoria": "Posto de Combustíveis",
+        "endereço": "Rodovia Amaral Peixoto, Km 106",
+        "numero": 90,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "3071-5405",
+        "pagamento": ["Dinheiro", "cartão"],
+        "delivery": false
+    },
+    {
+        "id": 10,
+        "likes": 5,
+        "nome": "Liquigás - Disk Gás",
+        "categoria": "Distribuidora de Gás",
+        "endereço": "Avenida Dr. Almir Guimarães",
+        "numero": 148,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "2624-6279",
+        "pagamento": ["Dinheiro", "cartão"],
+        "delivery": true
+
+    },
+    {
+        "id": 11,
+        "likes": 5,
+        "nome": "Clínica da Família",
+        "categoria": "Posto de Saúde",
+        "endereço": "Avenida Dr. Almir Guimarães",
+        "numero": 10,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "2665-5601",
+        "pagamento": false,
+        "delivery": false
+
+    },
+    {
+        "id": 12,
+        "likes": 5,
+        "nome": "Amor de Bicho Veterinária",
+        "categoria": "Clínica Veterinária",
+        "endereço": "Rodovia Amaral Peixoto, Km 94,5",
+        "numero": 90,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "2624-0031",
+        "pagamento": ["Dinheiro", "cartão"],
+        "delivery": false
+
+    },
+    {
+        "id": 13,
+        "likes": 5,
+        "nome": "Orla Nova de Iguabinha Rações e Produtos Veterinários",
+        "categoria": "Clínica Veterinária",
+        "endereço": "Rua Blanca",
+        "numero": 25,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "2624-9118",
+        "pagamento": ["Dinheiro", "cartão"],
+        "delivery": true
+
     }
+
 ]
 
 
