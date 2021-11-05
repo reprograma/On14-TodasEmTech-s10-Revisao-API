@@ -8,81 +8,16 @@ const getAll = (request, response) => {
     let filtrados = models; // atribui a const models a let filtrados
 
     // Filtro por pagamento
-    if (pagamento) {
-        
-        filtrados = filtrados.filter (
-            
-            estabelecimento => {
-                
-                return estabelecimento.pagamento.includes(pagamento)
-
-            }
-        );
-    }
+    if (pagamento) filtrados = filtrados.filter(estabelecimento => estabelecimento.pagamento.includes(pagamento));
     
-    if (bairro) {
-        filtrados = filtrados.filter (
-            
-            estabelecimento => {
-            
-                return estabelecimento.bairro == bairro //não é necessário includes pq "bairro" não é um array. Includes percorre um array e retorna o que contiver o que eu estiver pesquisando.
-            }
-        );
+    if (bairro) filtrados = filtrados.filter(estabelecimento => estabelecimento.bairro == bairro); //não é necessário includes pq "bairro" não é um array. Includes percorre um array e retorna o que contiver o que eu estiver pesquisando.
 
-    }
-
-    if (delivery) {
-        
-        filtrados = filtrados.filter (
-            
-            estabelecimento => {
-            
-                return estabelecimento.delivery == (
-                    
-                    delivery == "true" ? true : false
-
-                )
-            }
-        );
-    }
+    if (delivery) filtrados = filtrados.filter(estabelecimento => estabelecimento.delivery == delivery == "true" ? true : false);
 
     response.status(200).send(filtrados); //tenho que chamar a let "filtrados", para poder pegar todos os filtros que criei. Se chamar send(models), vai retornar o json inteiro e ignorar os filtros.
 
 }
 
-/*
-const getById = (request, response) => {
-
-    const idSolicitado = request.params.id;
-    //const { id } = request.params;
-
-    const found = models.find (
-        
-        estabelecimento => {
-        
-            estabelecimento.id == idSolicitado
-
-        }
-    );
-
-    if (found == undefined) {
-        
-        response.status(404).send (
-            
-            {
-                
-                "message": "Estabelecimento não encontrado."
-                
-            }
-
-        );
-        
-    }
-        
-    response.status(200).send(idFound);
-
-}
-*/
 const getId = (req, res) => {
     const idSolicitado = req.params.id
  
@@ -121,7 +56,7 @@ const cadastro = (request, response) => {
     };
 
     //trabalhar os campos obrigatorios
-    if (!bodyRequest.nome || !bodyRequest.categoria) {
+    if (!bodyRequest.nome || !bodyRequest.categoria || !bodyRequest.telefone || !bodyRequest.pagamento) {
         
         return response.status(400).send(
             [
@@ -208,7 +143,6 @@ const atualizacao = (request, response) => {
 
 module.exports = {
     getAll,
-    //getById,
     getId,
     cadastro,
     updateLike,
@@ -233,11 +167,5 @@ module.exports = {
     arquitetura, 
     tecnologias 
     orientação ao usuário.
-
-*/
-
-
-/*
-    
 
 */
