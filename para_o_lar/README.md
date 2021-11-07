@@ -1,7 +1,7 @@
 
 
 
-<img src="./para_o_lar/assets/banner" width="100%">
+<img src="./assets/banner.png" width="100%">
 
 
 
