@@ -44,6 +44,8 @@ const getAll = (request, response)=>{
     console.log(body);
      let cadastrarEstabelecimento = {
         "id" : (models.length)+1,
+        "likes": body.likes,
+        "deslikes" : body.deslikes,
         "nome" : body.nome,
         "categoria":body.categoria,
         "endereco":body.endereco  ,
@@ -83,14 +85,14 @@ const like = (request,response)=>{
 
 }
 const deslike = (request,response)=>{ 
-    const {id}= request.params //const id =request.params.id
+    const {id}= request.params 
     const found = models.find(estabelecimento => estabelecimento.id == id)
  
     if(found == undefined){
         response.status(404).send({message: 'Estabelecimento não encontrado'})
     }
 
-    found.likes -= 1
+    found.deslikes -= 1
 
     response.status(200).send(found)
 

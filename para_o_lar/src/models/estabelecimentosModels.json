@@ -2,6 +2,7 @@
    {
       "id" : 1 ,
       "likes" : 1,
+      "deslikes": 2,
       "nome" : "Rei do Pirao",
       "categoria" : "restaurante",
       "endereco" : "Av Octavio Mangabeira n2609 " ,
@@ -15,6 +16,7 @@
    {
       "id" : 2,
       "likes" : 2,
+      "deslikes": 3,
       "nome" : "Coxinha do Gago",
       "categoria" : "lanchonete",
       "endereco" : "Praça do Imbui" ,
