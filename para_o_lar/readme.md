@@ -9,11 +9,11 @@ API desenvolvida em Projeto Guiado, no curso de  Back-end da {Reprograma}. Fomen
 ## 📑 Índice
 ---
 
-   - [Arquitetura](#Arquitetura)
-   - [Tecnologias](#Tecnologias)
-   - [Orientações](#Orientações)
-      - [Pré-requisitos](#pre-requisitos)
-      - [Rodando o Back End (servidor)](#Rodando-o-Back-End)
+   - [Arquitetura](#-arquitetura)
+   - [Tecnologias](#-tecnologias)
+   - [Orientações](#-orientações)
+      - [Pré-requisitos](#-pré-requisitos)
+      - [Rodando o Back End (servidor)](#-rodando-o-back-end-servidor)
  
 
 ### 🧱 Arquitetura
