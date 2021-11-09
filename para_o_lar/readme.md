@@ -14,6 +14,7 @@ API desenvolvida em Projeto Guiado, no curso de  Back-end da {Reprograma}. Fomen
    - [Orientações](#-orientações)
       - [Pré-requisitos](#-pré-requisitos)
       - [Rodando o Back End (servidor)](#-rodando-o-back-end-servidor)
+      - [Rotas, links e métodos](#-rotas)
  
 
 ### 🧱 Arquitetura
@@ -73,3 +74,22 @@ $ npm start
 
 # O servidor inciará na porta:7050 - acesse <http://localhost:7050>
 ```
+#### 🚀  Rotas, links e métodos
+---
+
+A ferramenta de suporte de criação das requisição usada foi o [Postman](https://www.postman.com/), você pode usar a de sua preferência.
+
+
+- Listar todos os estabelicimentos:
+GET 🗂️ <http://localhost:7050/estabelecimento/todos>
+
+- Listar estabelicimentos por id:
+GET 📂 <http://localhost:7050/estabelecimento/:id>
+
+- Criar um cadastro para o estabelicimento:
+POST 📋 <http://localhost:7050/estabelecimento/criar>
+
+- Dar like ou deslike em um estabelicmento:
+PATCH ❤️ <http://localhost:7050/estabelecimento/likes/:id/?>
+Obs.: Há dois query params, um para o like e outro para deslike. Assim, com a mesma rota é possível realizar as duas funções.
+
