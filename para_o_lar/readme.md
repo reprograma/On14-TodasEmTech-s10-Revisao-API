@@ -1,5 +1,3 @@
-<!-- ![assets/3.png](assets/3.png) -->
-
 # 🍽️ Fomentando API 
 
 API desenvolvida em Projeto Guiado, no curso de  Back-end da {Reprograma}. Fomentando é uma plataforma que tem por objetivo classificar os melhores bares e restaurantes da Zona Norte do Recife, tudo de acordo com os próprios moradores da região.
@@ -91,5 +89,5 @@ POST 📋 <http://localhost:7050/estabelecimento/criar>
 
 - Dar like ou deslike em um estabelicmento:
 PATCH ❤️ <http://localhost:7050/estabelecimento/likes/:id/?>
-Obs.: Há dois query params, um para o like e outro para deslike. Assim, com a mesma rota é possível realizar as duas funções.
+<br>Obs.: Há duas query params, um para o like e outro para deslike. Assim, com a mesma rota é possível realizar as duas funções.
 
