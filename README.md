@@ -1,106 +1,213 @@
-# Hello!
-
-Como você está lidando com esse processo de transição? 
-
-Aprender a aprender pode ser muito doloroso, mas eu te garanto uma coisa: é libertador! Chegamos na décima semana! E vocês estão voandooo!  🚀
-
-* Vamos começar com um momento só nosso ❤️
-* Depois vamos revisar alguns dos conceitos estudados nas últimas semanas
-* E de quebra teremos bastante treino!
-
----
-
-## Revisão
-
-Essa revisão vai te ajudar a relembrar conceitos e modelos para estabelecer o seu mapa mental de aprendizado! 😃
-
-### Node.js
-
-É um interpretador Javascript que não depende do navegador. 
-
-Ele é formado pelo V8, motor interpretador de Javascript criado pelo Google, e pela libuv, uma biblioteca que deu características de linguagem back-end para o node.
-
-Node.js revolucionou a forma de programar em Javascript, pois a linguagem evoluiu de uma forma de dar vida aos elementos no navegador para uma linguagem capaz de rodar sistemas em computadores/servidores.
-
-### HTTP
-
-É o protocolo de transferência de hipertexto. 
-
-O principal protocolo de comunicação entre computadores utilzados na internet.
-
-Ele cria as regras para enviar e receber informações na internet.
-
-Ele é responsável pelo o que acontece por debaixo dos panos quando usamos a internet.
-
-#### Verbos ou métodos
-
-É simples de entender:
-
-* GET: para consultas
-* POST: para criação de informações
+<img src="./assets/inicio.png" width="100%">
+<img src="./assets/meio.jpg" width="100%">
 
 
+# API - Estabelecimentos
+## 🚀 Descrição 
+
+API desenvolvida como Projeto Final para a conclusão do curso de Backend [{Reprograma}](https://reprograma.com.br/).
 
 
-### API
+   >Como mãe de duas crianças pequenas passei por varios infortunio, como trocar a fralda do meu filho em uma mesa porque o estabelecimento nao tinha fraldario ou um simples trocador no banheiro, ou ficar horas rodando de carro para encontrar um restaurante com espaço kids.<br>
 
-Interface entre aplicativos e programação.
-
-Se uma interface de um sistema é criado para o usuário final, a API é desenvolvida para que um sistema possa usar as funcionalidades de outro sistema.
-
-Interface ideal para que um sistema se comunique com outro sistema.
-
-### REST e RESTful
-
-Rest é uma abstração(forma de usar as regras) do protocolo HTTP para simplificar a construção de um web service, ou seja quem cria uma API com as restrições e regras do modelo Rest está criando na verdade API Restful.
-
-O grande objetivo desse modelo é fazer com que os recursos estejam disponíveis através de URLs.
-
-#### Algumas das regras: 
-
-* Adotar convenção de URLs
-* Basear em recursos
-* Usar os verbos HTTP para indicar ações
-* Ser stateless, ou seja, toda requisição é autossuficiente/independente
-
-### MVC
+   >
+   >Para minizar esse sofrimento nasce a FORKIDS uma plataforma onde pais e mães cadastram estabelecimentos (restaurantes, cinema, hotel, cabeleireiro) etc que são adequados para levar as crianças, afinal nada pior do que chegar em um lugar e não encontrar nem uma cadeirinha para colocar o pequeno ou um cardapio adequado para crianças. De pais para pais essa é a essencia do FORKIDS
 
 
-#### Server.js
-> Aqui no server que você vai chamar o app para escutar a porta e disponibilizar toda a aplicação a partir do localhost
+# Sumário
+=================
+<!--ts-->
+   * [Objetivos](#objetivos)
+   * [Aprendizados](#aprendizados)
+   * [Arquitetura Model View Controller](#arquitetura)
+   * [Instalação](#instalação)
+      * [Pre Requisitos](#pré-requisitos)
+      * [Rodando o Back End](#rodando-o-back-end)
+      * [Tecnologias](#tecnologias)
+      * [Features](#features)
+      * [Rotas](#rotas)
+   * [Modelo com campos obrigatórios para teste: Postman ou Insomnia](#modelo-com-campos-obrigatórios-para-teste)
+   * [Agradecimentos](#agradecimentos)
+<!--te-->
 
-#### App.js
-> Aqui no app que você vai usar a rota raiz 
+## ✅Objetivos
 
-#### 📂Routes
->  Aqui nas rotas você vai usar os verbos para  executar os controllers 
+- Cadastro de estabelecimentos pelos usuarios;
+- Busca de estabelecimentos por categoria, por bairro e cidade;
+- Avaliação dos estabelecimentos atraves de like ou deslike e comentarios dos usuarios;
+- Simplificar a busca de estabelecimentos adequados para levar as crianças;
 
-#### 📂Controller
-> Aqui no controller você vai acessar os dados do seu model a partir das requisições e enviar respostas
 
-#### 📂Model
-> Por enquanto estamos apenas guardando nosso JSON aqui, mas no futuro será o lugar onde você irá modelar os esquemas de dados para o banco. Não fique ansiosa! Acredite no processo, ele funciona!
+## ✅Aprendizados
+
+O projeto final consiste em uma API fundamentada no CRUD, que são:  CREATE (CRIAR), READ(LER-CONSULTA), UPDATE(ATUALIZAR) e DELETE(DESTRUIÇÃO). 
+
+## ✅Arquitetura
+
+        Arquitetura MVC
+        |
+        \--📂  Estabelecimentos
+            |   README.md  
+            |   .env
+            |   .gitignore
+            |   package-lock.json
+            |   package.json
+            |   **server.js**
+            \--📂 node_modules
+            \--📂 assets
+            \--📂src
+                |
+                |   **app.js**
+                |
+                📂---configs
+                |   **database.js
+                |
+                📂---controller
+                |       comentarioController.js
+                |       estabelecimentoController.js
+                |                      
+                📂---model
+                |       
+                |       comentarioSchema.js
+                |       estabelecimentoSchema.js
+                |       
+                |
+                📂---routes
+                |       comentarioRoutes.js
+                |       estabelecimentoRoutes.js**
+                |__      
 
 
 
+## ✅Instalação
+* Para realizar download do projeto, siga as instruções abaixo:
 
----
+### 👩‍👧‍👦Pré-requisitos
 
-## Tarefinhas
+Você precisa ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e o database NoSQL [Mongodb](https://www.mongodb.com/)
+E claro o bom e velho editor de código como [VSCode](https://code.visualstudio.com/)
 
-Vamos ajudar o nosso comércio local criando uma rede social para os estabelecimentos, vamos separa-los por categorias e bairros:
-**Proposta:**
+### 👩‍👧‍👦Rodando o Back End 
 
-![assets/proposta.jpg](assets/proposta.jpg)
+Server Local
 
----
-**Desafio:**
-#### Calma! É só mais uma oportunidade de continuar aprendendo e lembre-se estou aqui para ajudar!
+```bash
+# Com o git
+# Clone este repositório
+$ git clone <git@github.com:Edlaine-Pontes/Forkids.git>
 
-Já estamos treinando com nossos exemplos em aula, já já será a vez de você brilhar no mundo e chamar as migas tudo no grupo pra estudar juntas! 
+# Acesse a pasta do projeto no terminal/cmd
+$ cd Estabelecimentos
 
-## Edlaine (Só a minha mãe me chama assim, para vcs eu sou a EDI)
-- [instagram](https://www.instagram.com/pontesedlaine)
-- [linkedin](https://www.linkedin.com/in/edlaine-pontes/)
-- [github](https://github.com/edlaine-pontes)
-- email: edlaine@marti.com.br
+# Instale as dependências
+$ npm install
+$ npm instal mongoose
+
+# Execute o servidor
+$ npm start
+
+# O servidor inciará na porta:33 - acesse <http://localhost:3000>
+# Mongo conectado em mongodb://localhost:27017/forkids
+```
+* Modifique `.env` para receber as variáveis de ambiente e substitua para que seu servidor funcione adequadamente
+
+Para acessar via Heroku, acesse o [link da API](https:///)
+
+* Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para para chamar e testar os endpoints da API localmente ou via Heroku
+
+## 🛠Tecnologias
+
+Para a consturição do projeto, as seguintes tecnologiasforam utilizadas:
+
+- [JavaScript](https://www.javascript.com/)
+- [Git/Github](https://github.com/)
+- [Node.js](https://nodejs.org/en/)
+- [MongoDb](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [Nodemon](https://nodemon.io/)
+- [Express](https://expressjs.com/pt-br/)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [cors](https://www.npmjs.com/package/cors)
+- [heroku](https://dashboard.heroku.com/apps)
+
+### 👩‍👧‍👦Features
+
+Funcionalidades da aplicação
+
+- [x] Cadastros do estabelecimento - POST
+- [x] Comentario - POST
+- [x] Like ou deslike - POST
+- [x] Busca - GET
+- [x] Busca por Categoria, estado e cidade - GET
+- [x] Atualização em todos os campos - PUT
+- [x] Apagar - DELETE
+
+### 👩‍👧‍👦Rotas
+
+* local: http://localhost:7050
+
+
+#### Retorna teste com apresentação 
+{ mensagem: O  em http://localhost:3 }
+- [x] "/estabelecimentos" 
+
+#### Cria novo cadastro de estabelecimento
+- [x] "/estabelecimentos" 
+
+#### Retorna estabelecimento por um id específico
+- [x] "/:Id" 
+
+#### Deleta cadastro do estabelecimento
+- [x] "/estabelecimentos/[ID]" 
+
+#### Enviar um comentario sobre um estabelecimento
+- [x] "/estabelecimentos/[ID]/comentarios" 
+
+
+#### Dar um like em um estabelecimento
+- [x] "/estabelecimentos/[ID]/like" 
+
+#### Atualiza o cadastro de um estabelecimento (id não pode ser modificado)
+- [x] "/estabelecimento/[ID]"
+
+
+## ✅Modelo com campos obrigatórios para teste
+
+### 👩‍👧‍👦 Estabelecimentos
+
+{
+    "nome": "Bar do Juarez", 
+    "site": "http://www.estabelecimento1.com.br",
+    "categoria": "restaurante",
+    "logradouro": "Rua Hum",
+    "numero": 2,
+    "bairro": "centro",
+    "cidade": "Jundiaí",
+    "estado": "sp"
+}
+
+#### 👩‍👧‍👦 Comentarios
+{
+    "comentario": "Otimo espaço kids e tem um cardapio adequado para crianças!"
+}
+
+### 🚧 Projeto em Construção
+
+        Autenticação
+        Sistema de Login
+        Ranking
+        
+
+
+# Agradecimentos
+
+<p align="justify">Aos 36 anos, depois de trabalhar por 16 anos em RH decidi que era hora de mudar de carreira. 
+Me organizei e fiz um bom planejamento financeiro, mas nem todo planejamento poderia me preparar para esse caminho dificil e algumas vezes doloroso.
+Mesmo ouvindo que eu era velha demais ou que por ser Psicologa eu não seria capaz de programar, eu nao desisti e no caminho encontrei a REPROGRAMA e a CLOUD GIRLS.
+Mulheres maravilhosas que acreditaram em mim quando eu nao acreditei. Rainhas guerreiras que conseguem equilibrar familia, estudo e trabalho.
+Entao eu quero agradecer a cada mulher que conheci na turma ON6-XP, a CECI que sempre ilumina os nossos dias a Jô pela oportunidade de mudar a minha vida e cada mentora e monitora que doaram o que existe de mais valioso "tempo".<br>
+Um agradecimento especial ao meu marido Henrique Marti por ser meu porto seguro, minha inspiração e meu parceiro de vida, e ao meus filhos que tiveram paciencia (quando eu nao tinha). <br>
+E ao Cloud Girls (Juh e Danilo) que abriu as portas da mudança e me permitiu voar bem alto.<br>
+
+E lembre-se programar é ERRAR, ERRAR, ERRAR e ACERTAR e não esqueça de ser divertir!</p>

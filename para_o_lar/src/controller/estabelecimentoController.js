@@ -67,10 +67,10 @@ const getId = (req, res) =>{
          }
 
            if(!body.nome || !body.pagamento || !body.cidade){
-               return res.status(400).send({mensagem: "o campo nome é obrigatorio"})
+               return res.status(400).send({message: "o campo nome é obrigatorio"})
            }
            if(body.nome.length > 10){
-               return res.status(400).send({mensagem: "voce ultrapassou o limite de 10 caracteres"})
+               return res.status(400).send({message: "voce ultrapassou o limite de 10 caracteres"})
            }
 
           models.push(novoEstabelecimento)
@@ -79,7 +79,7 @@ const getId = (req, res) =>{
     }
 
         const like = (req, res) => {
-            const id = req.params.id
+            const {id} = req.params
 
             const found = models.find(estabelecimento => estabelecimento.id == id)
 
@@ -109,19 +109,21 @@ const getId = (req, res) =>{
     }
 
         const removerEstabelecimento  = (req, res) => {
-            const id = req.params.id 
-            const found = models.find(estabelecimento => estabelecimento.id == id)
+            const idrequest = req.params.id 
+            const found = models.find(estabelecimento => estabelecimento.id == idrequest)
 
             if(found == undefined){
                 res.status(404).send({message: "estabelecimento nao encontrado"})
 
             }
             const index = models.indexOf(found)
+             models.splice(index ,1)
+             res.status(200).send({message: "estabelecimento removido com sucesso"})
         }
 
         const atualizacao = (req, res) => {
             const id = req.params.id 
-            const found = models.find(estabelecimento => estabelecimento.id == idrequest)
+            const found = models.find(estabelecimento => estabelecimento.id == id)
 
         
 
@@ -131,20 +133,21 @@ const getId = (req, res) =>{
             }
             
 
-          const { nome, categoria, endereco, numero, bairro, cidade, telefone, pagamento, delivery} = req.body
-
+         const { nome, categoria, endereco, numero, bairro, cidade, telefone, pagamento, delivery} = req.body
+           
 
           found.nome = nome || found.nome
           found.categoria = categoria || found.categoria
           found.endereco = endereco || found.endereco
+          found.numero = numero || found.numero
           found.bairro = bairro || found.bairro
           found.cidade = cidade || found.cidade
-          found.telefone = telefone || telefone.nome
+          found.telefone = telefone || found.telefone
           found.pagamento = pagamento || found.pagamento
           found.delivery = delivery || found.delivery
 
           
-          
+          console.log(found)
           res.status(200).send(found)
 
         }
@@ -163,4 +166,14 @@ const getId = (req, res) =>{
     
     
 }
+
+
+  
+
+  
+
+
+
+
+
 
