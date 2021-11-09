@@ -8,9 +8,6 @@ API desenvolvida em Projeto Guiado, no curso de  Back-end da {Reprograma}. Fomen
 
 ## 📑 Índice
 ---
-
-Tabela de conteúdos
-=================
    * [Arquitetura MVC](#Arquitetura-MVC)
    * [Tecnologias](#Tecnologias)
    * [Orientações](#instalacao)
