@@ -78,16 +78,16 @@ $ npm start
 A ferramenta de suporte de criação das requisição usada foi o [Postman](https://www.postman.com/), você pode usar a de sua preferência.
 
 
-- Listar todos os estabelicimentos:
+- Listar todos os estabelicimentos:<br />
 GET 🗂️ <http://localhost:7050/estabelecimento/todos>
 
-- Listar estabelicimentos por id:
+- Listar estabelicimentos por id:<br />
 GET 📂 <http://localhost:7050/estabelecimento/:id>
 
-- Criar um cadastro para o estabelicimento:
+- Criar um cadastro para o estabelicimento:<br />
 POST 📋 <http://localhost:7050/estabelecimento/criar>
 
-- Dar like ou deslike em um estabelicmento:
-PATCH ❤️ <http://localhost:7050/estabelecimento/likes/:id/?>
-<br>Obs.: Há duas query params, um para o like e outro para deslike. Assim, com a mesma rota é possível realizar as duas funções.
+- Dar like ou deslike em um estabelicmento:<br />
+PATCH ❤️ <http://localhost:7050/estabelecimento/likes/:id/?><br />
+Obs.: Há duas query params, um para o like e outro para deslike. Assim, com a mesma rota é possível realizar as duas funções.
 
