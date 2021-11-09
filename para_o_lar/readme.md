@@ -7,12 +7,14 @@ API desenvolvida em Projeto Guiado, no curso de  Back-end da {Reprograma}. Fomen
 ![assets/1.png](assets/1.png)
 
 ## 📑 Índice
+---
 
-   * [Arquitetura](#Arquitetura)
-   * [Tecnologias](#Tecnologias)
-   * [Orientações](#instalacao)
-      * [Pré-requisitos](#pre-requisitos)
-      * [Rodando o Back End (servidor)](#Rodando-o-Back-End)
+   - [Arquitetura](#Arquitetura)
+   - [Tecnologias](#Tecnologias)
+   - [Orientações](#Orientações)
+      - [Pré-requisitos](#pre-requisitos)
+      - [Rodando o Back End (servidor)](#Rodando-o-Back-End)
+ 
 
 ### 🧱 Arquitetura
 ---
