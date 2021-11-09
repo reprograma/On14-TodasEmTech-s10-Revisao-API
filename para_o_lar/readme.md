@@ -88,6 +88,6 @@ GET 📂 <http://localhost:7050/estabelecimento/:id>
 POST 📋 <http://localhost:7050/estabelecimento/criar>
 
 - Dar like ou deslike em um estabelicmento:<br />
-PATCH ❤️ <http://localhost:7050/estabelecimento/likes/:id/?><br />
+PATCH 👍 <http://localhost:7050/estabelecimento/likes/:id/?><br />
 Obs.: Há duas query params, um para o like e outro para deslike. Assim, com a mesma rota é possível realizar as duas funções.
 
