@@ -4,7 +4,7 @@
 
 API desenvolvida em Projeto Guiado, no curso de  Back-end da {Reprograma}. Fomentando é uma plataforma que tem por objetivo classificar os melhores bares e restaurantes da Zona Norte do Recife, tudo de acordo com os próprios moradores da região.
 
-![assets/2.png](assets/2.png)
+![assets/1.png](assets/1.png)
 
 ## 📑 Índice
 
