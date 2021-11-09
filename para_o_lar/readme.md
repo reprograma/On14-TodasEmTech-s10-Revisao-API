@@ -12,7 +12,7 @@ API desenvolvida em Projeto Guiado, no curso de  Back-end da {Reprograma}. Fomen
    - [Orientações](#-orientações)
       - [Pré-requisitos](#-pré-requisitos)
       - [Rodando o Back End (servidor)](#-rodando-o-back-end-servidor)
-      - [Rotas, links e métodos](#-rotas)
+      - [Rotas, links e métodos](#--rotas-links-e-métodos)
  
 
 ### 🧱 Arquitetura
