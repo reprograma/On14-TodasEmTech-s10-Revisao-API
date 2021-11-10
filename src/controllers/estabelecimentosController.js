@@ -4,10 +4,8 @@ const getAll = (req, res) => {
   let filtrados = models;
   res.status(200).send(filtrados);
 
-  // transformar todos os itens abaixo do json em const
-  //const { pagamento, bairro, bailes } = req.query; //usar let, pq dependendo do filtro ela vai mudar
-};
-//filtro por pagamento
+ };
+
 
 const getId = (req, res) => {
   const idSolicitado = req.params.id; // const {id} = req.params outra forma de fazer por ID subtituindo a linha acima
@@ -21,8 +19,7 @@ const getId = (req, res) => {
 };
 
 const ritmo = (req, res) => {
-  console.log("alal linha");
-  const qualRitmo = req.query.ritmos;
+    const qualRitmo = req.query.ritmos;
   let filtrados = models;
 
   if (qualRitmo) {
@@ -35,18 +32,6 @@ const ritmo = (req, res) => {
   }
   res.status(200).send(filtrados);
 };
-
-/*const patchLike = (req, res) => {
-  const idRequisitada = req.params.id;
-  let idEncontrada = models.find(
-    (estabelecimento) => estabelecimento.id == idRequisitada
-  );
-  idRequisitada.like = newLike;
-  let newLike = req.body.like.length + 1;
-  res.status(200).send({ message: "você ganhou mais uma curtida" });
-  console.log(`você curtiu que eu vi, ${newLike}`);
-};*/
-// FAZER UM POST = CREATE
 
 const createEstabelecimento = (req, res) => {
   const body = req.body; //
@@ -91,43 +76,45 @@ const updatePhone = (req, res) => {
   let escolaEncontrada = models.find(
     (estabelecimento) => estabelecimento.id == idRequest
   );
-  escolaEncontrada.telefone = newPhone;
   let newPhone = req.body.telefone;
+  escolaEncontrada.telefone.toString().includes(escolaEncontrada) = newPhone;
+  
+  
   res.status(201).json([
     {
       mensagem: "telefone da escola atualizado com sucesso",
-      newPhone,
+      escolaEncontrada,
     },
   ]);
 };
 
-/*const like = async (req, res) => {
+const like = async (req, res) => {
     try {
         const { id } = req.params
-        estabelecimento = await estabelecimentoCollection.findById(id)
+        estabelecimento = await models.findById(id)
 
         estabelecimento.likes += 1
 
-        await estabelecimentoCollection.updateOne(estabelecimento)
+        await models.updateOne(estabelecimento)
         return res.status(200).send(estabelecimento)
     } catch(error) {
-        return res.status(404).send({ message: 'Estabelecimento não encontrado' })
+        return res.status(404).send({ message: 'Escola não encontrada' })
     }
 }
 
 const dislike = async (req, res) => {
     try {
         const { id } = req.params
-        estabelecimento = await estabelecimentoCollection.findById(id)
+        estabelecimento = await models.findById(id)
 
         estabelecimento.likes -= 1
 
-        await estabelecimentoCollection.updateOne(estabelecimento)
+        await models.updateOne(estabelecimento)
         return res.status(200).send(estabelecimento)
     } catch(error) {
-        return res.status(404).send({ message: 'Estabelecimento não encontrado' })
+        return res.status(404).send({ message: 'Escola não encontrada' })
     }
-}*/
+}
 
 module.exports = {
   getAll,
@@ -136,16 +123,12 @@ module.exports = {
   deleteEstabelecimento,
   createEstabelecimento,
   updatePhone,
+  like,
+  dislike,
 };
 
-//para o lar:
-//post cadastro estabelecimento ou like
-//e commitar
-//let reqPagamento = req.query.pagamento;
-//const pagamentoEncontrado = reqPagamento;
-// const { pagamento, bairro, ritmo }
 
-/*
+/*body da nova escola
 {
   "id": ,
   "likes": 2,

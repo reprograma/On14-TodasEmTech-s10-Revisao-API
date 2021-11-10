@@ -4,14 +4,10 @@ const router = express.Router();
 
 router.get("/all", controller.getAll);
 router.get("/ritmos", controller.ritmo);
-//router.patch("/like", controller.patchLike);
-;//colocar por último para não dar erro
 router.patch("/atualizar", controller.updatePhone);
 router.post("/adicionar", controller.createEstabelecimento);
-router.delete("/delete",controller.deleteEstabelecimento)
-router.get("/:id", controller.getId)
+router.delete("/delete", controller.deleteEstabelecimento);
+router.get("/:id", controller.getId);
+router.post("/like", controller.like);
+router.post("/dislike", controller.dislike);
 module.exports = router;
-//
-
-/*router.post('/:id/like', controller.like)
-router.post('/:id/dislike', controller.dislike)*/
