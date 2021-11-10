@@ -44,9 +44,6 @@ const getId = (req, res) => {
 }
 
 
-
-
-
 // post
 
 const createRegistration = (req, res) => {
@@ -75,11 +72,7 @@ const createRegistration = (req, res) => {
             return res.status(400).send({mensagem: "você ultrapassou o limite de 10 caracteres"})
         }
 
-    //models.push(newRegistration)
-
-
-    //res.status(201).send(newRegistration)
-           
+             
 
 
 //validações novas
@@ -124,44 +117,11 @@ const createRegistration = (req, res) => {
         found.likes -= 1
     
         res.status(200).send(found)
+
+    }
+
     
-        }
-
-        //updateLike colocar la embaixo tb
-        const updateLikes = (request, response) => {
-            const idRequest = request.params.id
-            let likeRequest = request.body.likes
         
-            estabelecimentoEncontrado = models.find(local => local.id == idRequest)
-        
-            let like = estabelecimentoEncontrado.likes + likeRequest
-        
-            estabelecimentoEncontrado.likes = like
-            write ()
-        
-            response.status(200).json(
-                [{
-                    "message": "Você gostou disso",
-                    models
-                }]
-        
-            )
-        }
-
-        // chamar deslike lá embaixo
-        const likeDislike= (req, res) => {
-            const {id} = req.params
-            estabelecimento = models.find(e => e.id == id)
-        
-            likeRequest = req.query.likes
-            dislikeRequest = req.query.dislike
-            if( likeRequest == "true") estabelecimento.likes++
-            if(dislikeRequest == "true") estabelecimento.dislikes++
-        
-            res.status(200).send(estabelecimento)
-        }
-        
-
         const removeEstabelecimento = (req, res) =>{
         const id = req.params.id 
     
@@ -180,7 +140,7 @@ const createRegistration = (req, res) => {
         }
 
      // é igual const { id } = req.params
- const atualizacao = (req, res) =>{
+     const atualizacao = (req, res) =>{
      const idRequest = req.params.id
      const bodyRequest = req.body
 
@@ -227,4 +187,6 @@ module.exports = {
     deslike, 
     removeEstabelecimento,
     atualizacao
+    
 }
+    

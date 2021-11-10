@@ -1,106 +1,194 @@
-# Hello!
+<img src="./assets/Iguabinhaweb.png" width="100%">
 
-Como você está lidando com esse processo de transição? 
 
-Aprender a aprender pode ser muito doloroso, mas eu te garanto uma coisa: é libertador! Chegamos na décima semana! E vocês estão voandooo!  🚀
 
-* Vamos começar com um momento só nosso ❤️
-* Depois vamos revisar alguns dos conceitos estudados nas últimas semanas
-* E de quebra teremos bastante treino!
-
----
-
-## Revisão
-
-Essa revisão vai te ajudar a relembrar conceitos e modelos para estabelecer o seu mapa mental de aprendizado! 😃
-
-### Node.js
-
-É um interpretador Javascript que não depende do navegador. 
-
-Ele é formado pelo V8, motor interpretador de Javascript criado pelo Google, e pela libuv, uma biblioteca que deu características de linguagem back-end para o node.
-
-Node.js revolucionou a forma de programar em Javascript, pois a linguagem evoluiu de uma forma de dar vida aos elementos no navegador para uma linguagem capaz de rodar sistemas em computadores/servidores.
-
-### HTTP
-
-É o protocolo de transferência de hipertexto. 
-
-O principal protocolo de comunicação entre computadores utilzados na internet.
-
-Ele cria as regras para enviar e receber informações na internet.
-
-Ele é responsável pelo o que acontece por debaixo dos panos quando usamos a internet.
-
-#### Verbos ou métodos
-
-É simples de entender:
-
-* GET: para consultas
-* POST: para criação de informações
+# API - IGUABINHA WEB
+## 🚀 Descrição
 
 
 
 
-### API
+   >Resido em um distrito chamado Iguabinha, pertencente a cidade de Araruama, na Região dos Lagos do Estado do Rio de Janeiro, sendo longe do Centro da Cidade e mais próximo a um outro município. Como um lugar onde não existe um grande comércio,são distantes um do outro e não há propaganda, resolvi através dessa plataforma minimizar o trabalho de procura de estabelecimentos por moradores e visitantes<br>
 
-Interface entre aplicativos e programação.
-
-Se uma interface de um sistema é criado para o usuário final, a API é desenvolvida para que um sistema possa usar as funcionalidades de outro sistema.
-
-Interface ideal para que um sistema se comunique com outro sistema.
-
-### REST e RESTful
-
-Rest é uma abstração(forma de usar as regras) do protocolo HTTP para simplificar a construção de um web service, ou seja quem cria uma API com as restrições e regras do modelo Rest está criando na verdade API Restful.
-
-O grande objetivo desse modelo é fazer com que os recursos estejam disponíveis através de URLs.
-
-#### Algumas das regras: 
-
-* Adotar convenção de URLs
-* Basear em recursos
-* Usar os verbos HTTP para indicar ações
-* Ser stateless, ou seja, toda requisição é autossuficiente/independente
-
-### MVC
+   >
+   >Assim, visando facilitar a vida das pessoas nasce a Iguabinha Web uma plataforma onde moradores e visitantes podem consultar, atualizar, cadastrar estabelecimentos (mercado, farmácia, lanchonete, posto de combustíveis, veterinária, etc), podendo inclusive deixar sua opinião  através de like ou deslike.
 
 
-#### Server.js
-> Aqui no server que você vai chamar o app para escutar a porta e disponibilizar toda a aplicação a partir do localhost
+# Sumário
+=================
+<!--ts-->
+   * [Objetivos](#objetivos)
+   * [Aprendizados](#aprendizados)
+   * [Arquitetura Model View Controller](#arquitetura)
+   * [Instalação](#instalação)
+      * [Pre Requisitos](#pré-requisitos)
+      * [Rodando o Back End](#rodando-o-back-end)
+      * [Tecnologias](#tecnologias)
+      * [Features](#features)
+      * [Rotas](#rotas)
+   * [Modelo com campos obrigatórios para teste: Postman ou Insomnia](#modelo-com-campos-obrigatórios-para-teste)
+   * [Agradecimentos](#agradecimentos)
+<!--te-->
 
-#### App.js
-> Aqui no app que você vai usar a rota raiz 
+## ✅Objetivos
 
-#### 📂Routes
->  Aqui nas rotas você vai usar os verbos para  executar os controllers 
-
-#### 📂Controller
-> Aqui no controller você vai acessar os dados do seu model a partir das requisições e enviar respostas
-
-#### 📂Model
-> Por enquanto estamos apenas guardando nosso JSON aqui, mas no futuro será o lugar onde você irá modelar os esquemas de dados para o banco. Não fique ansiosa! Acredite no processo, ele funciona!
+- Cadastro de estabelecimentos pelos usuarios;
+- Busca de estabelecimentos por categoria; 
+- Avaliação dos estabelecimentos através de like ou deslike;
+- Simplificar a busca de estabelecimentos por moradores ou visitantes de distrito de Iguabinha;
 
 
+## ✅Aprendizados
+
+Construção de API fundamentada no CRUD, que são:  CREATE (CRIAR), READ(LER-CONSULTAR), UPDATE(ATUALIZAR) e DELETE(DESTRUIR). 
+
+## ✅Arquitetura
+
+        Arquitetura MVC
+        |
+        \--📂  IGUABINHA WEB
+            |   README.md  
+            |   .gitignore
+            |   package-lock.json
+            |   package.json
+            |   **server.js**
+            \--📂 node_modules
+            \--📂 assets
+            \--📂src
+                |
+                |   **app.js**
+                |
+                |
+                📂---controller
+                |       
+                |       estabelecimentoController.js
+                |                      
+                📂---model
+                |       
+                |       
+                |       estabelecimento.js
+                |       
+                |
+                📂---routes
+                |      
+                |       estabelecimentoRoutes.js**
+                |__      
 
 
----
 
-## Tarefinhas
+## ✅Instalação
+* Para realizar download do projeto, siga as instruções abaixo:
 
-Vamos ajudar o nosso comércio local criando uma rede social para os estabelecimentos, vamos separa-los por categorias e bairros:
-**Proposta:**
+### 👩‍👧‍👦Pré-requisitos
 
-![assets/proposta.jpg](assets/proposta.jpg)
+Você precisa ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) 
+E claro o bom e velho editor de código como [VSCode](https://code.visualstudio.com/)
 
----
-**Desafio:**
-#### Calma! É só mais uma oportunidade de continuar aprendendo e lembre-se estou aqui para ajudar!
+### 👩‍👧‍👦Rodando o Back End 
 
-Já estamos treinando com nossos exemplos em aula, já já será a vez de você brilhar no mundo e chamar as migas tudo no grupo pra estudar juntas! 
+Server Local
 
-## Edlaine (Só a minha mãe me chama assim, para vcs eu sou a EDI)
-- [instagram](https://www.instagram.com/pontesedlaine)
-- [linkedin](https://www.linkedin.com/in/edlaine-pontes/)
-- [github](https://github.com/edlaine-pontes)
-- email: edlaine@marti.com.br
+```bash
+# Com o git
+# Clone este repositório
+$ git clone <git@github.com:Edlaine-Pontes/Forkids.git>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd IGUABINHA WEB
+# Instale as dependências
+$ npm install
+$ npm instal mongoose
+
+# Execute o servidor
+$ npm start
+
+
+* Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para para chamar e testar os endpoints da API localmente ou via Heroku
+
+## 🛠Tecnologias
+
+Para a consturição do projeto, as seguintes tecnologiasforam utilizadas:
+
+- [JavaScript](https://www.javascript.com/)
+- [Git/Github](https://github.com/)
+- [Node.js](https://nodejs.org/en/)
+- [Nodemon](https://nodemon.io/)
+- [Express](https://expressjs.com/pt-br/)
+- [cors](https://www.npmjs.com/package/cors)
+
+### 👩‍👧‍👦Features
+
+Funcionalidades da aplicação
+
+- [x] Cadastros do estabelecimento - POST
+- [x] Comentario - POST
+- [x] Like ou deslike - POST
+- [x] Busca - GET
+- [x] Busca por Categoria - GET
+- [x] Atualização em todos os campos - PUT
+- [x] Apagar - DELETE
+
+### 👩‍👧‍👦Rotas
+
+* local: http://localhost:7051
+
+
+
+#### Retorna teste com apresentação 
+{ mensagem: O app está rodando em http://localhost:7051 }
+- [x] "/estabelecimentos" 
+
+#### Cria novo cadastro de estabelecimento
+- [x] "/estabelecimentos" 
+
+#### Retorna estabelecimento por um id específico
+- [x] "/:Id" 
+
+#### Deleta cadastro do estabelecimento
+- [x] "/estabelecimentos/[ID]" 
+
+
+#### Dar um like em um estabelecimento
+- [x] "/estabelecimentos/[ID]/like" 
+
+#### Atualiza o cadastro de um estabelecimento (id não pode ser modificado)
+- [x] "/estabelecimento/[ID]"
+
+
+## ✅Modelo com campos obrigatórios para teste
+
+### 👩‍👧‍👦 Estabelecimentos
+
+{
+        "id": 1,
+        "likes": 5,
+        "nome": "Drogaria Unilagos",
+        "categoria": "Farmácia",
+        "endereço": "Rua Blanca",
+        "numero": 25,
+        "bairro": "Iguabinha",
+        "cidade": "Araruama",
+        "telefone": "2624-0082",
+        "pagamento": ["Dinheiro", "cartão"],
+        "delivery": true
+      
+    },
+
+
+
+### 🚧 Projeto em Construção
+
+        Autenticação
+        Sistema de Login
+        Ranking
+        
+
+
+# Agradecimentos
+
+<p align="justify">Aos 38 anos, decidi que era hora de mudar de carreira, por não me sentir satisfeita na qual escolhi. Descobri que sempre há tempo pra mudar. 
+Deixei meu emprego e logo a seguir me inscrevi na Reprograma, fui selecionada e hoje faço parte deste incrível grupo de mulheres que conseguem se equilibrar com tantas funções a desempenhar.
+Entao eu quero agradecer à REPROGRAMA  que confiou na minha história e me forneceu a possibilidade, de a esta altura da vida, mudar minha história e mostrar a mim mesma que sou capaz. Quero agradecer também a todas as mulheres da turma que se dedicam a ajudar às outras. Um agradecimento especial à Raquel, nossa facilitadora, uma mulher iluminada que em todas as aulas traz seu sorriso e a certeza de dias melhores.<br>
+Agradeço imensamente à minha família por sempre estarem comigo nas minhas decisões, me apoiando, incentivando e acreditando junto comigo. <br>
+Estou apenas iniciando no mundo da programação, mas espero que através do aprendizado consiga superar as minhas próprias expectativas.</p>
