@@ -4,10 +4,10 @@ const router = express.Router();
 
 router.get("/all", controller.getAll);
 router.get("/ritmos", controller.ritmo);
-router.patch("/atualizar", controller.updatePhone);
-router.post("/adicionar", controller.createEstabelecimento);
-router.delete("/delete", controller.deleteEstabelecimento);
+router.patch("/atualizar/:id", controller.updatePhone);
+router.post("/adicionar/:id", controller.createEstabelecimento);
+router.delete("/delete/:id", controller.deleteEstabelecimento);
 router.get("/:id", controller.getId);
-router.post("/like", controller.like);
-router.post("/dislike", controller.dislike);
+router.post("/like/:id", controller.like);
+router.post("/dislike/:id", controller.dislike);
 module.exports = router;
