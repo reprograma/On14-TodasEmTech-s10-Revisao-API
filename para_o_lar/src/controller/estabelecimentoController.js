@@ -47,8 +47,9 @@ const create = (req, res) => {
   let newRegistration = {
     id: (models.length) + 1,
     likes: createRegistration.likes,
+    deslikes: createRegistration.deslikes,
     nome: createRegistration.nome,
-    cadastro: createRegistration.cadastro,
+    categoria: createRegistration.categoria,
     endereço: createRegistration.endereço,
     numero: createRegistration.numero,
     cidade: createRegistration.cidade,
@@ -58,20 +59,98 @@ const create = (req, res) => {
     karate: createRegistration.karate
   }
 
+  if(!createRegistration.nome || createRegistration.categoria || createRegistration.karate || createRegistration.pagamento) {
+    return res.status(400).send({mensage: 'Nome é obrigatório!'})
+  }
+
+  if(createRegistration.nome.length > 50) {
+    return res.status(400).send({message: "Ultrapassou o limite de 50 caracteres."})
+  }
+
   models.push(newRegistration);
 
   res.status(201).json([
     {
-      mensagem: "Academia cadastrada com sucesso",
+      mensage: "Academia cadastrada com sucesso",
       newRegistration
     }
   ]);
 
 }
 
+const likesUpdate = (req, res) => {
+  const id = req.params.id;
+  const filterGym = models.find(estabelecimento => estabelecimento.id == id);
+
+  if(filterGym == undefined) {
+    res.status(404).send({mensage: "Estabelecimento não encontrado."})
+  }
+
+  filterGym.likes += 1
+  
+  res.status(200).send(filterGym)
+}
+
+const deslikesUptade = (req, res) => {
+  const id = req.params.id;
+  const filterGym = models.find(estabelecimento => estabelecimento.id == id);
+
+  if(filterGym == undefined) {
+    res.status(404).send({mensage: "Estabelecimento não encontrado."})
+  }
+
+  filterGym.deslikes += 1
+  
+  res.status(200).send(filterGym)
+}
+
+const deleteGym = (req, res) => {
+  const id = req.params.id;
+  const filterGym = models.find(estabelecimento => estabelecimento.id == id);
+
+  if(filterGym == undefined) {
+    res.status(404).send({mensage: "Estabelecimento não encontrado."})
+  }
+  
+  const index = models.indexOf(filterGym)
+
+  models.splice(index, 1)
+ 
+  
+  res.status(200).send({mensage: "Estabelecimento deletado."})
+}
+
+const updateGym = (req, res) => {
+  const id = req.params.id;
+  const filterGym = models.find(estabelecimento => estabelecimento.id == id);
+  let body = req.body;
+
+  body.id = id;
+
+  if(filterGym == undefined) {
+    res.status(404).send({mensage: "Estabelecimento não encontrado."})
+  }
+  
+  
+
+  Object.keys(filterGym).forEach((key) => {
+    if(body[key] != undefined) {
+      filterGym[key] = body[key];
+    }
+  })
+  
+ 
+  
+  res.status(200).send(filterGym)
+}
+
 
 module.exports = {
   getAll,
   getById,
-  create
+  create,
+  likesUpdate,
+  deslikesUptade,
+  deleteGym,
+  updateGym
 }
