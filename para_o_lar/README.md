@@ -17,7 +17,7 @@ O projeto consiste em uma API REST com uso dos principais métodos HTTP: GET, PO
 
         Arquitetura MVC
         |
-        \--📂  API - GRAB A BITE
+        \--📂  API - FIGHT FOUND
             |   README.md  
             |   .gitignore
             |   package-lock.json
