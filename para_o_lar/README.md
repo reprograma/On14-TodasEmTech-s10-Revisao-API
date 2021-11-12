@@ -1,5 +1,5 @@
 
-<img src="./assets/Orange and Black Gyms Back to Business Landscape Banner.gif" width="100%">
+<img src="../assets/Orange and Black Gyms Back to Business Landscape Banner.gif" width="100%">
 
 # API REST
 # FIGHT FOUND
