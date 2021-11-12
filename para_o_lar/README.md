@@ -124,7 +124,7 @@ $ npm start
 {
     "nome": "Oxxy Academia",
     "categoria": "academia",
-    "pagamento": ["Cartão","Dinheiro","Pix"]
+    "pagamento": ["Cartão","Dinheiro","Pix"],
     "karate":"false"
 }
 
