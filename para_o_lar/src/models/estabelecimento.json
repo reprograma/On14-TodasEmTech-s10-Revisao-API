@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "likes": 1,
+    "nome": "Hi Fitness",
+    "categoria": "academia",
+    "endereço": "Rua Cento e Quatro",
+    "numero": 339,
+    "bairro": "Maranguape I",
+    "cidade": "Paulista",
+    "estado": "Pernambuco",
+    "telefone": "99772-7983",
+    "pagamento": ["Dinheiro", "Credito", "Debito", "Pix"],
+    "karate": true
+  },
+  {
+    "id": 2,
+    "likes": 1,
+    "nome": "Fit Plus",
+    "categoria": "academia",
+    "endereço": "Rua Romenia",
+    "numero": 28,
+    "bairro": "Pau Amarelo",
+    "cidade": "Paulista",
+    "estado": "Pernambuco",
+    "telefone": "98878-7193",
+    "pagamento": ["Dinheiro", "Credito", "Debito", "Pix"],
+    "karate": true
+  }
+]
