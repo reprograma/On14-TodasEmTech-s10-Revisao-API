@@ -1,7 +1,7 @@
 <img src="/careCat/assets/imagem1.png" width="80%">
 <img src = "./assets/imagem2 .png" width="80%">
 
-# API -CARECAT
+# API - CARECAT
 ## 🚀 Descrição
 
 API desenvolvida nas semanas 10 e 11 do curso de Backend [{Reprograma}](https://reprograma.com.br/).
