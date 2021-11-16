@@ -10,7 +10,7 @@ API desenvolvida nas semanas 10 e 11 do curso de Backend [{Reprograma}](https://
 
 
   
-  Apesar disso a frequênia das visitas de gatos ao veterinário é muito inferior as dos cães. Isso ocorre devido a dificuldade que muitos tuteres enfrentam ao levar seus bichanos nas consultas veterinárias, como a dificuldade de transporte até a clínica, o estresse causado nos animais, a forma que o médico vetrinário lida com o animal e até mesmo por vergonha do comportamento do felino.
+  Apesar disso a frequênia das visitas de gatos ao veterinário é muito inferior as dos cães. Isso ocorre devido a dificuldade que muitos tutores enfrentam ao levar seus bichanos nas consultas veterinárias, como a dificuldade de transporte até a clínica, o estresse causado nos animais, a forma que o médico vetrinário lida com o animal e até mesmo por vergonha do comportamento do felino.
 
   Visando isso, foram criadas clínicas especializadas em felinos e espaços Cat  Friendly, que possuem como objetivo tornar as idas ao veternário menos estressante para os gatos, já que o local é preparada especificamente para atender as necessidades felinas.
 
