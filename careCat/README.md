@@ -6,7 +6,7 @@
 
 API desenvolvida nas semanas 10 e 11 do curso de Backend [{Reprograma}](https://reprograma.com.br/).
 
-  A populção felina já ultrapassou a caninas em  muitos países e cada vez mais o número de gatos vem crescendo nos nesses locais. No Brasil não é diferente, a papulção dde gatos tem tido um aumento anual de 8%.
+  A populção felina já ultrapassou a caninas em  muitos países e cada vez mais o número de gatos vem crescendo nos nesses locais. No Brasil não é diferente, a populção dde gatos tem tido um aumento anual de 8%.
 
 
   
