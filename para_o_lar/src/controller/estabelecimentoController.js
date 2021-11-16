@@ -1,9 +1,4 @@
 const models = require ('../models/estabelecimentos.json');
-//const pagamento = req.query.params
-//forma mais simples
-
-
-
  const getAll = (req, res)=> {
 
     const{pagamento, categoria, delivery} = req.query
