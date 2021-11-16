@@ -1,5 +1,5 @@
 <img src="/careCat/assets/imagem1.png" width="80%">
-<img src = "./assets/imagem2 .png" width="80%">
+<img src = "./assets/imagem3 .png" width="80%">
 
 # API - CARECAT
 ## 🚀 Descrição
