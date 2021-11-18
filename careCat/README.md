@@ -37,7 +37,7 @@ O CARECAT é uma plataformaa onde os tutores e veterinários podem cadastrar e p
 
 ## ✅Objetivos
 
-- Cadastro de clínicas vetrinárias pelos usuarios;
+- Cadastro de clínicas veterinárias pelos usuarios;
 - Busca de estabelecimentos por categoria, por estado, bairro e cidade;
 - Avaliação das clinicas atraves de like ou deslike;
 - Simplificar a busca de clínicas especializada em felinos ou com espaço Cat Friendly;
@@ -104,7 +104,6 @@ $ npm install
 $ npm start
 
 # O servidor inciará na porta:7050 - acesse <http://localhost:7050>
-# Mongo conectado em mongodb://localhost:27017/forkids
 ```
 
 * Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para para chamar e testar os endpoints da API localmente 
