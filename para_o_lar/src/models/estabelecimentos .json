@@ -1,0 +1,129 @@
+
+
+
+[
+  {
+    "id": 1,
+    "likes": 1,
+    "nome" : "Bar do Pacheco",
+    "categoria": "bar",
+    "endereço": "R. Prof. Enéas de Siqueira Neto",
+    "numero": 751,
+    "bairro" :  "Jardim das Imbuias",
+    "cidade": "São Paulo ",
+    "telefone": " 5971-5741",
+    "pagamento": ["dinheiro", "cartao" , "pix " ] ,
+    "delivery": false
+
+  },
+  {
+    "id": 2,
+    "likes": 0,
+    "nome" : "Hamburgueria Martins House",
+    "categoria": "lanchonete ",
+    "endereço": "R. Prof. Enéas de Siqueira Neto",
+    "numero": 575 ,
+    "bairro" : "Jardim das Imbuias",
+    "cidade": "São Paulo ",
+    "telefone": " 3926-0089 ",
+    "pagamento": ["dinheiro", "cartao" , "pix " ] ,
+    "delivery": true
+  },
+  {
+    "id": 3,
+    "likes": 0,
+    "nome" : "Cholos Burger",
+    "categoria": "lanchonete ",
+    "endereço": "R. Prof. Enéas de Siqueira Neto",
+    "numero": 617 ,
+    "bairro" :  "Jardim das Imbuias",
+    "cidade": "São Paulo ",
+    "telefone": "99674-0028 ",
+    "pagamento": ["dinheiro", "cartao" , "pix " ] ,
+    "delivery": true
+  },
+  {
+    "id": 4,
+    "likes": 0,
+    "nome" : "Point Açaí II",
+    "categoria": "lanchonete ",
+    "endereço": "R. Prof. Enéas de Siqueira Neto",
+    "numero": 471,
+    "bairro" :  "Jardim das Imbuias",
+    "cidade": "São Paulo ",
+    "telefone": " 3368-3450",
+    "pagamento":["dinheiro", "cartao" , "pix " ] ,
+    "delivery": true
+  },
+  {
+    "id": 5,
+    "likes": 0,
+    "nome" : "Espaço Do Açai & restaurante",
+    "categoria": "restaurante",
+    "endereço": "R. Prof. Enéas de Siqueira Neto",
+    "numero": "sem numero ",
+    "bairro" : "Jardim das Imbuias",
+    "cidade": "São Paulo ",
+    "telefone": " 5971-6479",
+    "pagamento": ["dinheiro", "cartao" , "pix " ] ,
+    "delivery": true
+  }
+  ,
+  {
+    "id": 6,
+    "likes": 0,
+    "nome" : "PIZZARIA 333",
+    "categoria": "Lanchonete ",
+    "endereço":"R. Prof. Enéas de Siqueira Neto",
+    "numero": 738,
+    "bairro" : "Jardim das Imbuias",
+    "cidade": "São Paulo ",
+    "telefone": " 5929-2333",
+    "pagamento": ["dinheiro", "cartao" , "pix " ] ,
+    "delivery": true
+  }
+  ,
+  {
+    "id": 7,
+    "likes": 0,
+    "nome" : "HOUSE CHOPERIA",
+    "categoria": "Bar",
+    "endereço": "R. Prof. Enéas de Siqueira Neto",
+    "numero": 525,
+    "bairro" : "Jardim das Imbuias",
+    "cidade": "São Paulo ",
+    "telefone": " 95156-4915",
+    "pagamento": ["dinheiro", "cartao" , "pix " ] ,
+    "delivery": true
+  }
+  ,
+  {
+    "id": 8,
+    "likes": 0,
+    "nome" : "Salgados da Vó",
+    "categoria": "lanchonet ",
+    "endereço": "R. Prof. Enéas de Siqueira Neto",
+    "numero":  571,
+    "bairro" : "Jardim das Imbuias",
+    "cidade": "São Paulo ",
+    "telefone": " 2592-8826",
+    "pagamento": ["dinheiro", "cartao" , "pix " ] ,
+    "delivery": true
+  }
+  ,
+  {
+    "id": 9,
+    "likes": 0,
+    "nome" : "CANTINHO DO CHEFE",
+    "categoria": "bar ",
+    "endereço": "R. Carolina Michaelis",
+    "numero": 20,
+    "bairro" : "Jardim das Imbuias",
+    "cidade": "São Paulo ",
+    "telefone": "sem ",
+    "pagamento": ["dinheiro", "cartao" , "pix " ] ,
+    "delivery": false
+  }
+  
+  
+]
