@@ -6,17 +6,15 @@
 
 API desenvolvida nas semanas 10 e 11 do curso de Backend [{Reprograma}](https://reprograma.com.br/).
 
-  A populção felina já ultrapassou a caninas em  muitos países e cada vez mais o número de gatos vem crescendo nos nesses locais. No Brasil não é diferente, a populção de gatos tem tido um aumento anual de 8%.
-
-
+  A população felina já ultrapassou a caninas em  muitos países e cada vez mais o número de gatos vem crescendo nesses locais. No Brasil não é diferente, a população de gatos tem tido um aumento anual de 8%.
   
-  Apesar disso a frequênia das visitas de gatos ao veterinário é muito inferior as dos cães. Isso ocorre devido a dificuldade que muitos tutores enfrentam ao levar seus bichanos nas consultas veterinárias, como a dificuldade de transporte até a clínica, o estresse causado nos animais, a forma que o médico vetrinário lida com o animal e até mesmo por vergonha do comportamento do felino.
+  Apesar disso a frequência das visitas de gatos ao veterinário é muito inferior as dos cães. Isso ocorre devido a dificuldade que muitos tutores enfrentam ao levar seus bichanos nas consultas veterinárias, como a dificuldade de transporte até a clínica, o estresse causado nos animais, a forma que o médico veterinário lida com o animal e até mesmo por vergonha do comportamento do felino.
 
-  Visando isso, foram criadas clínicas especializadas em felinos e espaços Cat  Friendly, que possuem como objetivo tornar as idas ao veternário menos estressante para os gatos, já que o local é preparada especificamente para atender as necessidades felinas.
+  Visando isso, foram criadas clínicas especializadas em felinos e espaços Cat  Friendly, que possuem como objetivo tornar as idas ao veterinário menos estressante para os gatos, já que o local é preparada especificamente para atender as necessidades felinas.
 
-Como tutora e amante dos gatos sei como uma clínica com espaço Cat Friendely faz diferença no atendimentos dos animais, porém, infelizmente essa prática ainda não é adota por muitas clínicas no Brasil. Com o obejtivo de facilitar a pesquisa de locais adequados para levar nossos felinos fo criado o CARECAT. 
+Como tutora e amante dos gatos sei como uma clínica com espaço Cat Friendely faz diferença no atendimentos dos animais, porém, infelizmente essa prática ainda não é adota por muitas clínicas no Brasil. Com o objetivo de facilitar a pesquisa de locais adequados para levar nossos felinos foi criado o CARECAT. 
 
-O CARECAT é uma plataformaa onde os tutores e veterinários podem cadastrar e pesquisar clínicas especializadas em felinos ou que possua espaços Cat Friendely, afinal nossos peludos também precisam de assitência e cuidade, sem estresse e com muito amor e carinho. 
+O CARECAT é uma plataforma onde os tutores e veterinários podem cadastrar e pesquisar clínicas especializadas em felinos ou que possua espaços Cat Friendely, afinal nossos peludos também precisam de assistência e cuidado, sem estresse e com muito amor e carinho.
 
 # Sumário
 =================
