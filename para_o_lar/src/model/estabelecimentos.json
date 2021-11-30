@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "likes": 1,
+    "nome": "Baillar - Escola de dança",
+    "endereço": "Rua Doutor Carlos Chagas",
+    "numero": 24,
+    "telefone": "00000000",
+    "bairro": "Santo Amaro",
+    "cidade": "Recife",
+    "pagamento": ["cartao", "pix"],
+    "ritmos": ["Samba", "forro", "bolero"],
+    "bailes": true
+  },
+
+  {
+    "id": 2,
+    "likes": 4,
+    "nome": "Biazzi - Centro cultural",
+    "endereço": "Av. Conselheiro Aguiar",
+    "numero": 4880,
+    "telefone": "333333333",
+    "bairro": "Boa Viagem",
+    "cidade": "Recife",
+    "pagamento": ["cartao", "a vista"],
+    "ritmos": ["zouk", "bachata", "forró"],
+    "bailes": false
+  }
+]
