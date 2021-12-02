@@ -12,17 +12,23 @@ Vamos continuar com o projeto da redes sociais, vamos deixa-los mais robusto. Na
 
 Vamos entender melhor os nossos dados e contrato definido para nossa API. 
 O json com os dados que vamos usar na nossa API é o arquivo `estabelecimento.json` que está na pasta.
-
+Models
 
 ** Vamos cadastrar novos estabelecimentos usando o verbo correto (qual sera o verbo?)
+POST
+
 ** Vamos atualizar apenas o endereço de um estabelecimento 
+PUT
 
 Vamos deixar mais completo a nossa rede social
 
 ** Vamos Incluir a opção de dar like no estabelecimento (sim voce consegue fazer isso)
+PATCH?
 ** Mas e se voce foi no estabelecimento e não gostou? Então vamos tambem criar a opção de deslike.
-
+PATCH?
 ** Agora a parte criativa fica com você, de um nome para a nossa rede social, voce tem liberdade para criar outras melhorias.
+KadeGame
+
 
 ## Como Fazer?
 

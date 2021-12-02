@@ -1,0 +1,47 @@
+[
+    {
+        "id" :1,
+        "nome": "Studio Games",
+        "Site":"https://www.instagram.com/studiogamesbelem/?hl=pt",
+        "likes":1,
+        "Categoria":"Grande",
+        "Endereco":"Shopping Pátio Belém - 3° piso",
+        "Numero":1078,
+        "Bairro":"Batista Campos",
+        "Cidade":"Belém",
+        "Contato":"98274-5658",
+        "Pagamento": ["Cartão", "Pix"]
+        
+
+    },
+    {
+        "id" :2,
+        "nome": "QG Gaming",
+        "Site":"https://www.instagram.com/qggaminggg/",
+        "likes":1,
+        "Categoria":"Média",
+        "Endereco":"Av. Gov Magalhães Barata",
+        "Numero":278,
+        "Bairro":"Nazaré",
+        "Cidade":"Belém",
+        "Contato":"3227-9087",
+        "Pagamento": ["Cartão", "Pix"]
+        
+
+    },
+    {
+        "id" :3,
+        "nome": "Lan House HardCore",
+        "Site":"https://www.facebook.com/lanhdcr/",
+        "likes":1,
+        "Categoria":"Pequena",
+        "Endereco":"Alameda São Pedro",
+        "Numero":40,
+        "Bairro":"Campina de Icoaraci",
+        "Cidade":"Belém",
+        "Contato":"3352-9178",
+        "Pagamento": ["Dinheiro", "Cartão", "Pix"]
+        
+
+    }
+]
