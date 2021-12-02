@@ -19,6 +19,7 @@ const getAll = (request, response) => {
 }
 
 const getId = (req, res) => {
+    
     const idSolicitado = req.params.id
  
     const found = models.find(estabelecimento => estabelecimento.id == idSolicitado);
@@ -59,11 +60,9 @@ const cadastro = (request, response) => {
     if (!bodyRequest.nome || !bodyRequest.categoria || !bodyRequest.telefone || !bodyRequest.pagamento) {
         
         return response.status(400).send(
-            [
-                {
-                    "Message": "Os campos: 'nome', 'categoria', 'telefone' e 'pagamento', são obrigatórios. Certifique-se de tê-los preenchidos corretamente."
-                }
-            ]
+            {
+            "Message": "Os campos: 'nome', 'categoria', 'telefone' e 'pagamento', são obrigatórios. Certifique-se de tê-los preenchidos corretamente."
+            }
         );
     }
 
