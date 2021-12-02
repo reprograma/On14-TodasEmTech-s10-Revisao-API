@@ -1,106 +1,137 @@
-# Hello!
+# API REST
+## Busca Padarias
 
-Como você está lidando com esse processo de transição? 
+ > Essa API foi construída para cadastrar padarias para quem precisa encontrar de forma mais rápida e eficiente. Além do cadastro faz uma busca completa por nome, endereço, bairro, ainda informa o tipo de pagamento que aceita e seu número de contato. Foi pensada para quem necessita encontrar uma padaria na hora e não sabem onde buscar. Avaliações também estarão disponíveis, com possibilidade de like e deslike.<br>
 
-Aprender a aprender pode ser muito doloroso, mas eu te garanto uma coisa: é libertador! Chegamos na décima semana! E vocês estão voandooo!  🚀
+## ✅ Aprendizados
 
-* Vamos começar com um momento só nosso ❤️
-* Depois vamos revisar alguns dos conceitos estudados nas últimas semanas
-* E de quebra teremos bastante treino!
+O projeto consiste em uma API REST com uso dos principais métodos HTTP: GET, POST, PUT, PATCH e DELETE.
 
----
+## 📂Arquitetura
 
-## Revisão
-
-Essa revisão vai te ajudar a relembrar conceitos e modelos para estabelecer o seu mapa mental de aprendizado! 😃
-
-### Node.js
-
-É um interpretador Javascript que não depende do navegador. 
-
-Ele é formado pelo V8, motor interpretador de Javascript criado pelo Google, e pela libuv, uma biblioteca que deu características de linguagem back-end para o node.
-
-Node.js revolucionou a forma de programar em Javascript, pois a linguagem evoluiu de uma forma de dar vida aos elementos no navegador para uma linguagem capaz de rodar sistemas em computadores/servidores.
-
-### HTTP
-
-É o protocolo de transferência de hipertexto. 
-
-O principal protocolo de comunicação entre computadores utilzados na internet.
-
-Ele cria as regras para enviar e receber informações na internet.
-
-Ele é responsável pelo o que acontece por debaixo dos panos quando usamos a internet.
-
-#### Verbos ou métodos
-
-É simples de entender:
-
-* GET: para consultas
-* POST: para criação de informações
+        Arquitetura MVC
+        |
+        \--📂  API - FIGHT FOUND
+            |   README.md  
+            |   .gitignore
+            |   package-lock.json
+            |   package.json
+            |   server.js
+            \--📂 node_modules
+            \--📂 assets
+            \--📂src
+                |
+                |   app.js
+                |
+                📂---controllers
+                |       
+                |       estabelecimentoController.js
+                |                      
+                📂---models
+                |       
+                |       estabelecimentos.json
+                |
+                📂---routes
+                |      
+                |       estabelecimentoRoutes.js
+                |__      
 
 
 
+## Instalação
+Para realizar download do projeto, siga as instruções abaixo:
 
-### API
+### Pré-requisitos
 
-Interface entre aplicativos e programação.
+Instalar:
+[Git](https://git-scm.com) e [Node.js](https://nodejs.org/en/)
 
-Se uma interface de um sistema é criado para o usuário final, a API é desenvolvida para que um sistema possa usar as funcionalidades de outro sistema.
+### Rodando o Back End 
 
-Interface ideal para que um sistema se comunique com outro sistema.
+## No terminal/ gitbash:
+### Clone este repositório
+$ git clone <https://github.com/juliarebecca/On14-TodasEmTech-s10-Revisao-API/tree/JuliaBorges>
 
-### REST e RESTful
+## Acesse a pasta do projeto no terminal/cmd
+$ cd para_o_lar
 
-Rest é uma abstração(forma de usar as regras) do protocolo HTTP para simplificar a construção de um web service, ou seja quem cria uma API com as restrições e regras do modelo Rest está criando na verdade API Restful.
+## Instale as dependências
+$ npm install express nodemon cors
 
-O grande objetivo desse modelo é fazer com que os recursos estejam disponíveis através de URLs.
+## Execute o servidor
+$ npm start
 
-#### Algumas das regras: 
-
-* Adotar convenção de URLs
-* Basear em recursos
-* Usar os verbos HTTP para indicar ações
-* Ser stateless, ou seja, toda requisição é autossuficiente/independente
-
-### MVC
-
-
-#### Server.js
-> Aqui no server que você vai chamar o app para escutar a porta e disponibilizar toda a aplicação a partir do localhost
-
-#### App.js
-> Aqui no app que você vai usar a rota raiz 
-
-#### 📂Routes
->  Aqui nas rotas você vai usar os verbos para  executar os controllers 
-
-#### 📂Controller
-> Aqui no controller você vai acessar os dados do seu model a partir das requisições e enviar respostas
-
-#### 📂Model
-> Por enquanto estamos apenas guardando nosso JSON aqui, mas no futuro será o lugar onde você irá modelar os esquemas de dados para o banco. Não fique ansiosa! Acredite no processo, ele funciona!
+ O servidor inciará na porta:7050. 
+ Acesse <http://localhost:7050>
 
 
+* Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para para chamar e testar os endpoints da API localmente.
+
+## 🛠 Tecnologias
+
+- [JavaScript](https://www.javascript.com/)
+- [Git/Github](https://github.com/)
+- [Node.js](https://nodejs.org/en/)
+- [Nodemon](https://nodemon.io/)
+- [Express](https://expressjs.com/pt-br/)
+- [Cors](https://www.npmjs.com/package/cors)
+
+## Funcionalidades da aplicação
+
+- [x] Cadastro da padaria - POST
+- [x] Busca por id, categoria, pagamento - GET
+- [x] Like ou deslike - PATCH
+- [x] Atualização da padaria - PUT
+- [x] Excluir padaria - DELETE
+
+## Rotas
+
+* local: http://localhost:7050
+ 
+
+## Cria novo cadastro da padaria
+- [x] "/cadrastro" 
+
+## Retorna padarias e filtra por pagamento, bairro 
+- [x] /todos" 
+
+## Retorna padaria por um id específico
+- [x] "/:id" 
+
+## Atualiza o cadastro de uma padaria
+- [x] "/:id/atualiza"
+
+## Dar um like em uma padaria 
+- [x] "/:id/likes" 
+
+## Dar um deslike em uma padaria
+- [x] "/:id/deslike" 
+
+## Deleta cadastro da padaria 
+- [x] "/:id/delete"
 
 
----
+## ✅Modelo com campos obrigatórios para teste
 
-## Tarefinhas
+###  Estabelecimentos
 
-Vamos ajudar o nosso comércio local criando uma rede social para os estabelecimentos, vamos separa-los por categorias e bairros:
-**Proposta:**
+ {
+        "id": 2,
+        "likes": 1,
+        "nome": "Padaria Ferreira",
+        "categoria": "padaria",
+        "endereço": "R. Santa Inês",
+        "numero": 2812,
+        "bairro": "Potengi",
+        "cidade": "Natal",
+        "telefone": "3214-7135",
+        "pagamento": ["Dinheiro", "cartao", "pix"] 
+    }
 
-![assets/proposta.jpg](assets/proposta.jpg)
+### 🚧 Projeto em Construção
 
----
-**Desafio:**
-#### Calma! É só mais uma oportunidade de continuar aprendendo e lembre-se estou aqui para ajudar!
+        Integrar database com MongoDB
+        
+## 🔒 Licence
 
-Já estamos treinando com nossos exemplos em aula, já já será a vez de você brilhar no mundo e chamar as migas tudo no grupo pra estudar juntas! 
-
-## Edlaine (Só a minha mãe me chama assim, para vcs eu sou a EDI)
-- [instagram](https://www.instagram.com/pontesedlaine)
-- [linkedin](https://www.linkedin.com/in/edlaine-pontes/)
-- [github](https://github.com/edlaine-pontes)
-- email: edlaine@marti.com.br
+[MIT License](./LICENSE.md) © [Julia Borges](https://www.linkedin.com/in/juliarebeccaborges/)
