@@ -1,30 +1,28 @@
 [
     {
         "id": 1,
-        "likes": 1,
-        "nome": "Neto Lanches",
-        "categoria": "lanchonete",
-        "endereço": "Rua Geraldo Abdala",
+        "likes": 3,
+        "nome": "Praça Muhammad Ali",
+        "categoria": "praça",
+        "endereço": "Gamboa",
         "numero": 100,
         "bairro": "centro",
-        "cidade": "Tangara",
-        "telefone": "4156-4452",
-        "pagamento": ["Dinheiro", "pix"] ,
-        "delivery": true
+        "cidade": "Rio de Janeiro",
+        "telefone": "2224-8088",
+        "crianca": true
     },
 
     {
         "id": 2,
         "likes": 1,
-        "nome": "Rose Variedades",
-        "categoria": "Loja",
-        "endereço": "Rua Geraldo Abdala",
-        "numero": 200,
-        "bairro": "Bubu",
-        "cidade": "Tangara",
+        "nome": "Praça do Marfu",
+        "categoria": "praça",
+        "endereço": "R. Dona Teresa",
+        "numero": 750,
+        "bairro": "Engenho de Dentro",
+        "cidade": "Rio de Janeiro",
         "telefone": "4155-4452",
-        "pagamento": ["Dinheiro", "cartao", "pix"] ,
-        "delivery": false
+        "crianca": false
     }
     
 ]

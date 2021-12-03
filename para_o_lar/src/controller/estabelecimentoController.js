@@ -62,11 +62,11 @@ const cadastrar = (req, res) => {
         bairro:body.bairro,
         cidade:body.cidade,
         telefone:body.telefone,
-        pagamento:body.pagamento,
-        delivery:body.delivery,
+        crianca:body.crianca
+        
     }
 
-    if (!body.nome || !body.pagamento || !body.cidade){
+    if (!body.nome || !body.crianca || !body.cidade){
          return res.status(400).send({mensagem: "Algum campo obrigatorio nao foi preenchido"})
     }
 
