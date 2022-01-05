@@ -1,0 +1,72 @@
+[
+    {
+
+        "id": 1,
+        "likes": 1,
+        "deslike":0,
+        "nome": "Gattos - Clinica Especializada em Medicina Felina",
+        "estado": "SP",
+        "endereço": "Av. Ver. José Diniz",
+        "numero":3165,
+        "bairro":"Campo Bleo",
+        "cidade":"São Paulo",
+        "telefone":"(11)2597-1047",
+        "especializado": true,
+        "catFriendly": true
+
+    },
+
+    {
+        "id": 2,
+        "likes": 1,
+        "deslike":0,
+        "nome": "The Cat Doctor- Clínica Especializada em Medicina Felina",
+        "estado": "SP",
+        "endereço": " R. Sena Madureira",
+        "numero":667,
+        "bairro":"Vila Mariana",
+        "cidade":"São Paulo",
+        "telefone":" (11) 3731-4609",
+        "especializado": true,
+        "catFriendly": true
+
+    }, 
+
+    {
+        
+        "id": 3,
+        "likes": 1,
+        "deslike":0,
+        "nome": "Clínica Veterinária Sr. Gato",
+        "estado": "SP",
+        "endereço": "R. Mateus Grou",
+        "numero":56,
+        "bairro":"Pinheiros",
+        "cidade":"São Paulo",
+        "telefone":"(11) 3061-3853",
+        "especializado": true,
+        "catFriendly": true
+
+
+
+    },
+
+    {
+
+        "id":4,
+        "likes": 1,
+        "deslike":0,
+        "nome": "Cetra Gatos - Clínica Veterinária exclusiva para gatos",
+        "estado": "RJ",
+        "endereço": "Av. Armando Lombardi",
+        "numero":35,
+        "bairro":"Barra da Tijuca",
+        "cidade":"Rio de Janeiro",
+        "telefone":"(21) 3400-2162",
+        "especializado": true,
+        "catFriendly": true
+
+    }
+
+    
+]
