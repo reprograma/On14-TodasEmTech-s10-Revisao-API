@@ -2,29 +2,27 @@
     {
         "id": 1,
         "likes": 1,
-        "nome": "Neto Lanches",
-        "categoria": "lanchonete",
-        "endereço": "Rua Geraldo Abdala",
-        "numero": 100,
-        "bairro": "centro",
-        "cidade": "Tangara",
-        "telefone": "4156-4452",
-        "pagamento": ["Dinheiro", "pix"] ,
-        "delivery": true
+        "nome": "Padaria Mercatto",
+        "categoria": "padaria",
+        "endereço": "Av. Nascimento de Castro",
+        "numero": 1890,
+        "bairro": "lagoa nova",
+        "cidade": "Natal",
+        "telefone": "2010-5555",
+        "pagamento": ["Dinheiro", "pix"] 
     },
 
     {
         "id": 2,
         "likes": 1,
-        "nome": "Rose Variedades",
-        "categoria": "Loja",
-        "endereço": "Rua Geraldo Abdala",
-        "numero": 200,
-        "bairro": "Bubu",
-        "cidade": "Tangara",
-        "telefone": "4155-4452",
-        "pagamento": ["Dinheiro", "cartao", "pix"] ,
-        "delivery": false
+        "nome": "Padaria Ferreira",
+        "categoria": "padaria",
+        "endereço": "R. Santa Inês",
+        "numero": 2812,
+        "bairro": "Potengi",
+        "cidade": "Natal",
+        "telefone": "3214-7135",
+        "pagamento": ["Dinheiro", "cartao", "pix"] 
     }
     
 ]
