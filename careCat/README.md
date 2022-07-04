@@ -4,10 +4,9 @@
 </h1>
 <p align="center">
 
-
-<img src="./assets/imagem1.png" width="50%" align="center"> <img src = "./assets/imagem3.png" width="50%" align="center">
-
-
+< align="center">
+<img src="./assets/imagem1.png" width="45%"> <img src = "./assets/imagem3.png" width="45%">
+<p align="center">
 # API - CARECAT
 ## 🚀 Descrição
 
