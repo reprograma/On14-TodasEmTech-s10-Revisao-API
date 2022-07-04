@@ -5,8 +5,7 @@
 <p align="center">
 
 
-<img src="./assets/imagem1.png" width="80%">
-<img src = "./assets/imagem3.png" width="80%">
+<img src="./assets/imagem1.png" width="50%"> <img src = "./assets/imagem3.png" width="50%">
 
 # API - CARECAT
 ## 🚀 Descrição
